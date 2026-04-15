@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="activa">● Activa</string>
+    <string name="hace_5_min">Hace 5 min</string>
+    <string name="_4_8">⭐ 4.8</string>
+    <string name="ver_perfil">Ver perfil</string>
+    <string name="suspender">Suspender</string>
+    <string name="cliente">Cliente</string>
+    <string name="maria_email_com">maria@email.com</string>
+    <string name="mar_a_garc_a">María García</string>
+</resources>

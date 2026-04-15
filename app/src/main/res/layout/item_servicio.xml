@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp">
+
+    <!-- Fila superior -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Icono servicio -->
+        <TextView
+            android:id="@+id/tvIconoServicio"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:background="#FFF3E0"
+            android:layout_marginEnd="12dp"/>
+
+        <!-- Nombre y prestador -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNombreServicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Instalación Eléctrica"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#333333"/>
+
+            <TextView
+                android:id="@+id/tvPrestadorServicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👤 Juan Rodríguez"
+                android:textSize="12sp"
+                android:textColor="#888888"/>
+
+        </LinearLayout>
+
+        <!-- Precio y estado -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/tvPrecio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$50/h"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#6200EE"/>
+
+            <TextView
+                android:id="@+id/tvEstadoServicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activo"
+                android:textSize="11sp"
+                android:textColor="#2E7D32"
+                android:background="#E8F5E9"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Reporte (solo visible si estado == Reportado) -->
+    <TextView
+        android:id="@+id/tvReporte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⚠️ Reporte: Descripción no corresponde"
+        android:textSize="12sp"
+        android:textColor="#856404"
+        android:background="#FFF3CD"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"/>
+
+    <!-- Calificación y reseñas -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/tvCalificacion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="⭐ 4.9"
+            android:textSize="12sp"
+            android:textColor="#555555"/>
+
+        <TextView
+            android:id="@+id/tvResenas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="💬 127 reseñas"
+            android:textSize="12sp"
+            android:textColor="#555555"/>
+
+        <TextView
+            android:id="@+id/tvReservas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📅 342 reservas"
+            android:textSize="12sp"
+            android:textColor="#555555"/>
+
+    </LinearLayout>
+
+    <!-- Botones acción -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btnVerServicio"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="Ver"
+            android:backgroundTint="#F3E5FF"
+            android:textColor="#6200EE"
+            android:textSize="11sp"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btnAccion1"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="Pausar"
+            android:backgroundTint="#FFF9C4"
+            android:textColor="#F57F17"
+            android:textSize="11sp"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btnAccion2"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="Eliminar"
+            android:backgroundTint="#FFE5E5"
+            android:textColor="#D32F2F"
+            android:textSize="11sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

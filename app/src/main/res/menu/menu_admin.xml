@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_inicio"
+        android:icon="@drawable/dashboard"
+        android:title="Dashboard"/>
+
+    <item
+        android:id="@+id/nav_usuarios"
+        android:icon="@drawable/users"
+        android:title="Usuarios"/>
+
+    <item
+        android:id="@+id/nav_servicios"
+        android:icon="@drawable/service"
+        android:title="Servicios"/>
+
+    <item
+        android:id="@+id/nav_reportes"
+        android:icon="@drawable/report"
+        android:title="Reportes"/>
+
+    <item
+        android:id="@+id/nav_salir"
+        android:icon="@drawable/logout"
+        android:title="Salir"/>
+
+</menu>

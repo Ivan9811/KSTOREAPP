@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4A0E8F"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Panel de Control"
+                android:textColor="#CCFFFFFF"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Servicios"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnRefresh"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_rotate"
+            android:background="#5C1A9E"
+            android:layout_marginEnd="8dp"/>
+
+        <ImageButton
+            android:id="@+id/btnDescargar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_save"
+            android:background="#5C1A9E"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Buscador -->
+            <EditText
+                android:id="@+id/etBuscarServicio"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Buscar por servicio o prestador..."
+                android:paddingStart="16dp"
+                android:inputType="text"
+                android:background="@android:color/white"/>
+
+            <!-- Filtros -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnTodos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="Todos (2,180)"
+                        android:backgroundTint="#6200EE"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        android:layout_marginEnd="8dp"/>
+
+                    <Button
+                        android:id="@+id/btnActivos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="✓ Activos"
+                        android:backgroundTint="@android:color/white"
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        android:layout_marginEnd="8dp"/>
+
+                    <Button
+                        android:id="@+id/btnRevision"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="En revisión"
+                        android:backgroundTint="@android:color/white"
+                        android:textColor="#333333"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <!-- Estadísticas -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:gravity="center"
+                    android:layout_marginEnd="4dp">
+
+                    <TextView
+                        android:id="@+id/tvTotalActivos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2,051"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#6200EE"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Activos"
+                        android:textSize="11sp"
+                        android:textColor="#888888"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:gravity="center"
+                    android:layout_marginEnd="4dp">
+
+                    <TextView
+                        android:id="@+id/tvTotalRevision"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="89"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#FF8F00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="En revisión"
+                        android:textSize="11sp"
+                        android:textColor="#888888"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvTotalReportados"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#D32F2F"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reportados"
+                        android:textSize="11sp"
+                        android:textColor="#888888"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Botones aprobar/reportados -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/btnAprobarPendientes"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="✓ Aprobar pendientes (89)"
+                    android:backgroundTint="#E8F5E9"
+                    android:textColor="#2E7D32"
+                    android:textSize="11sp"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/btnVerReportados"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="Ver reportados (12)"
+                    android:backgroundTint="#FFE5E5"
+                    android:textColor="#D32F2F"
+                    android:textSize="11sp"/>
+
+            </LinearLayout>
+
+            <!-- Título lista -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SERVICIOS RECIENTES"
+                android:textSize="12sp"
+                android:textColor="#888888"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Lista servicios -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerServicios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -14,7 +14,8 @@ import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import com.ucompensar.kstoreapp.R
 import com.ucompensar.kstoreapp.UI.ADMIN.AdminActivity
-
+import com.ucompensar.kstoreapp.UI.CLIENTE.ClienteActivity
+import com.ucompensar.kstoreapp.UI.PROFESIONAL.ProfesionalActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -46,7 +47,14 @@ class LoginActivity : AppCompatActivity() {
                 etPassword.error = "Ingresa tu contraseña"
                 return@setOnClickListener
             }
-            startActivity(Intent(this, AdminActivity::class.java))
+
+            // Simulación de roles por email
+            val intent = when {
+                email.contains("admin")       -> Intent(this, AdminActivity::class.java)
+                email.contains("profesional") -> Intent(this, ProfesionalActivity::class.java)
+                else                          -> Intent(this, ClienteActivity::class.java)
+            }
+            startActivity(intent)
             finish()
         }
 
@@ -84,29 +92,21 @@ class LoginActivity : AppCompatActivity() {
                     this, executor,
                     object : BiometricPrompt.AuthenticationCallback() {
                         override fun onAuthenticationSucceeded(
-                            result: BiometricPrompt.AuthenticationResult
-                        ) {
+                            result: BiometricPrompt.AuthenticationResult) {
                             super.onAuthenticationSucceeded(result)
                             startActivity(Intent(this@LoginActivity, AdminActivity::class.java))
                             finish()
                         }
-
                         override fun onAuthenticationError(
-                            errorCode: Int, errString: CharSequence
-                        ) {
+                            errorCode: Int, errString: CharSequence) {
                             super.onAuthenticationError(errorCode, errString)
-                            Toast.makeText(
-                                this@LoginActivity,
-                                "Error: $errString", Toast.LENGTH_SHORT
-                            ).show()
+                            Toast.makeText(this@LoginActivity,
+                                "Error: $errString", Toast.LENGTH_SHORT).show()
                         }
-
                         override fun onAuthenticationFailed() {
                             super.onAuthenticationFailed()
-                            Toast.makeText(
-                                this@LoginActivity,
-                                "Autenticación fallida", Toast.LENGTH_SHORT
-                            ).show()
+                            Toast.makeText(this@LoginActivity,
+                                "Autenticación fallida", Toast.LENGTH_SHORT).show()
                         }
                     })
 

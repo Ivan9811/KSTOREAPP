@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <!-- Logo -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="65dp"
+            android:src="@mipmap/logo_morado_round"
+            android:background="@color/logo_background"
+            android:padding="1dp"
+            app:shapeAppearanceOverlay="@style/CircleImageView"/>
+
+        <!-- Nombre app -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Nombre_app"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Subtítulo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_inicio_login"
+            android:textSize="14sp"
+            android:textColor="#888888"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Label email -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/correo_electr_nico"
+            android:textSize="13sp"
+            android:textColor="#333333"
+            android:textStyle="bold"/>
+
+        <!-- Campo email -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="@string/ejemplo_correo"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/input"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Label contraseña -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contrase_a"
+            android:textSize="13sp"
+            android:textColor="#333333"
+            android:textStyle="bold"/>
+
+        <!-- Campo contraseña -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="@string/ejemplo_contraseña"
+            android:inputType="textPassword"
+            android:background="@drawable/input"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginTop="6dp"/>
+
+        <!-- Recordarme y olvidaste contraseña -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp">
+
+            <CheckBox
+                android:id="@+id/cbRecordarme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/check_rocordar"
+                android:textSize="13sp"
+                android:textColor="#555555"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tvOlvidaste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/olvidaste_tu_contrase_a"
+                android:textSize="13sp"
+                android:textColor="#6200EE"/>
+
+        </LinearLayout>
+
+        <!-- Botón Iniciar Sesión -->
+        <Button
+            android:id="@+id/btnIniciarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="@string/btn_iniciar_sesion"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#6200EE"/>
+
+        <!-- O continúa con -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_google"
+            android:textSize="13sp"
+            android:textColor="#888888"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Botón Google -->
+        <Button
+            android:id="@+id/btnGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="@string/iniciar_google"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:backgroundTint="@android:color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Botón Biometría -->
+        <Button
+            android:id="@+id/btnBiometria"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="@string/ingreso_huella"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:backgroundTint="@android:color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- ¿No tienes cuenta? -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_tienes_cuenta"
+                android:textSize="13sp"
+                android:textColor="#555555"/>
+
+            <TextView
+                android:id="@+id/tvRegistrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/registro_gratis"
+                android:textSize="13sp"
+                android:textColor="#6200EE"/>
+
+        </LinearLayout>
+
+        <!-- Botón Volver -->
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="@string/btn_volver"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:backgroundTint="@android:color/white"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="32dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

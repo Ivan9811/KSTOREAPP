@@ -11,6 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KSTOREAPP">
+
+        <activity
+            android:name=".UI.AUTH.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.AUTH.RegistroProfesionalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.AUTH.RegistroClienteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.AUTH.TipoCuentaActivity"
+            android:exported="false" />
         <activity
             android:name=".UI.PROFESIONAL.ProfesionalActivity"
             android:exported="false" />
@@ -18,10 +31,10 @@
             android:name=".UI.CLIENTE.ClienteActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".UI.ADMIN.AdminActivity"
             android:exported="false" />
         <activity
-            android:name=".UI.ADMIN.AdminActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

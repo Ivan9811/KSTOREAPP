@@ -12,4 +12,130 @@
     <string name="cliente">Cliente</string>
     <string name="maria_email_com">maria@email.com</string>
     <string name="mar_a_garc_a">María García</string>
+
+    <!-- Tipo Cuenta -->
+    <string name="tipo_de_cuenta">Tipo de cuenta</string>
+    <string name="c_mo_usar_s_serviciosapp">¿Cómo usarás ServiciosApp?</string>
+    <string name="soy_profesional">Soy Profesional</string>
+    <string name="profesional_index">Quiero ofrecer mis servicios y conseguir más clientes</string>
+    <string name="soy_cliente">Soy Cliente</string>
+    <string name="cliente_index">Quiero encontrar y contratar profesionales de confianza</string>
+    <string name="house_icon">🏠</string>
+    <string name="Trabajador_icon">👷</string>
+
+    <!-- Registro Cliente -->
+    <string name="registro_cliente">Registro Cliente</string>
+    <string name="nombre_completo">Nombre Completo</string>
+    <string name="ejemplo_nombre">María García</string>
+    <string name="correo_electr_nico">Correo Electrónico</string>
+    <string name="ejemplo_correo">tu@email.com</string>
+    <string name="tel_fono">Teléfono</string>
+    <string name="ejemplo_telefono">+57 300 123 4567</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="ejemplo_ciudad">Medellín</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="ejemplo_contraseña">Mínimo 8 caracteres</string>
+    <string name="crear_cuenta_de_cliente">Crear Cuenta de Cliente ✦</string>
+
+    <!-- Registro Profesional -->
+    <string name="registro_profesional">Registro Profesional</string>
+    <string name="ejemplo_nombre1">Juan Pérez</string>
+    <string name="ejemplo_ciudad1">Bogota</string>
+    <string name="seleccion_categoria">Selecciona tu(s) categoría(s)</string>
+    <string name="rayo_icon">⚡</string>
+    <string name="electricista">Electricista</string>
+    <string name="plomero_icon">🔧</string>
+    <string name="plomero">Plomero</string>
+    <string name="carpintero_icon">🔨</string>
+    <string name="carpintero">Carpintero</string>
+    <string name="pintor_icon">🎨</string>
+    <string name="pintor">Pintor</string>
+    <string name="dev_icon">💻</string>
+    <string name="dev">Dev</string>
+    <string name="limpieza_icon">🧹</string>
+    <string name="limpieza">Limpieza</string>
+    <string name="jardin_icon">🌿</string>
+    <string name="jard_n">Jardín</string>
+    <string name="mecanico_icon">🔩</string>
+    <string name="mec_nico">Mecánico</string>
+    <string name="arquitecto_icon">📐</string>
+    <string name="arquitecto">Arquitecto</string>
+    <string name="descripci_n_profesional">Descripción Profesional</string>
+    <string name="cu_ntanos_tu_experiencia">Cuéntanos tu experiencia...</string>
+    <string name="crear_cuenta_profesional">"Crear Cuenta Profesional "</string>
+    <string name="Nombre_app">K-STORE</string>
+    <string name="text_welcome">✨ +5000 profesionales activos</string>
+    <string name="text_welcome_1">Conecta con profesionales calificados\nen tu ciudad. Rápido, seguro y confiable.</string>
+    <string name="btn_iniciar_sesion">Iniciar Sesión</string>
+    <string name="btn_registrarse">Registrarse</string>
+
+
+    <!-- login -->
+    <string name="text_inicio_login">Inicia sesión para continuar</string>
+    <string name="check_rocordar">Recordarme</string>
+    <string name="olvidaste_tu_contrase_a">¿Olvidaste tu contraseña?</string>
+    <string name="text_google">o continúa con</string>
+    <string name="iniciar_google">Continuar con Google</string>
+    <string name="ingreso_huella">🔒 Usar huella</string>
+    <string name="no_tienes_cuenta">¿No tienes cuenta?</string>
+    <string name="registro_gratis">Regístrate gratis</string>
+    <string name="btn_volver">← Volver</string>
+
+    <!-- Reportes -->
+    <string name="panel_de_control">Panel de Control</string>
+    <string name="titulo_reportes">Reportes</string>
+    <string name="text_estadistica">7 días</string>
+    <string name="text_estadistica1">Este mes</string>
+    <string name="text_estadistica2">Trimestre</string>
+    <string name="text_estadistica3">Año</string>
+    <string name="tarjeta_ingreso">💰 Ingresos totales — Febrero 2026</string>
+    <string name="targeta_ingreso1">$48,240</string>
+    <string name="targeta_ingreso2">↑ +22% vs mes anterior</string>
+    <string name="metricas">MÉTRICAS CLAVE</string>
+    <string name="servicios">10,248</string>
+    <string name="servicios1_1">Servicios completados</string>
+    <string name="servicios1_2">↑ +15%</string>
+    <string name="servicios_icon">📋</string>
+    <string name="usuarios_icon">👥</string>
+    <string name="usuarios1">+124</string>
+    <string name="usuarios1_2">Nuevos usuarios</string>
+    <string name="ususarios1_3">↑ +8%</string>
+    <string name="calificacion_icon">⭐</string>
+    <string name="calificacion1_1">4.85</string>
+    <string name="calificacion1_2">Calificación prom.</string>
+    <string name="calificacion1_3">↑ +0.12</string>
+    <string name="tasa_icon">🔄</string>
+    <string name="tasa1_1">92%</string>
+    <string name="tasa1_2">Tasa de retención</string>
+    <string name="tasa1_3">↓ -2%</string>
+    <string name="estadisticas_categoria">📊 Servicios por Categoría</string>
+    <string name="estadisticas_electricista1">⚡ Electricistas</string>
+    <string name="estadisticas_electricista1_1">34%</string>
+    <string name="estadistica_limpieza1">🧹 Limpieza</string>
+    <string name="estadistica_limpieza1_2">28%</string>
+    <string name="estadistica_plomero1">🔧 Plomeros</string>
+    <string name="estadistica_plomero1_2">18%</string>
+    <string name="estadistica_tech1">💻 Tech</string>
+    <string name="estadistica_tech1_2">12%</string>
+    <string name="estadistica_pintura_otros1">🎨 Pintura / Otros</string>
+    <string name="estadistica_pintura_otros1_2">8%</string>
+    <string name="Top_prestadores">🏆 Top Prestadores del Mes</string>
+    <string name="prestador_icon1">🥇</string>
+    <string name="prestador1_1">JR</string>
+    <string name="prestador1_3">Juan Rodríguez</string>
+    <string name="prestador1_4">⚡ Electricista · 127 servicios</string>
+    <string name="prestador1_5">$6,350</string>
+    <string name="prestador_icon2">🥈</string>
+    <string name="prestador2_1">AS</string>
+    <string name="prestador2_2">Ana Silva</string>
+    <string name="prestador2_3">💻 Tech · 84 servicios</string>
+    <string name="prestador2_4">$5,120</string>
+    <string name="prestasdor_icon3">🥉</string>
+    <string name="prestador3_1">RM</string>
+    <string name="prestador3_2">Rosa Mendoza</string>
+    <string name="prestador3_3">🧹 Limpieza · 201 servicios</string>
+    <string name="prestador3_4">$4,860</string>
+    <string name="btn_pdf">📋 Exportar Reportes a PDF</string>
+
+
 </resources>

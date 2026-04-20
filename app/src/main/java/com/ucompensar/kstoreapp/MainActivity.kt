@@ -1,20 +1,29 @@
 package com.ucompensar.kstoreapp
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.ucompensar.kstoreapp.UI.AUTH.LoginActivity
+import com.ucompensar.kstoreapp.UI.AUTH.TipoCuentaActivity
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        window.statusBarColor = android.graphics.Color.parseColor("#6200EE")
+
+        val btnIniciarSesion = findViewById<Button>(R.id.btnIniciarSesion)
+        val btnRegistrarse   = findViewById<Button>(R.id.btnRegistrarse)
+
+        btnIniciarSesion.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
+
+        btnRegistrarse.setOnClickListener {
+            startActivity(Intent(this, TipoCuentaActivity::class.java))
         }
     }
 }

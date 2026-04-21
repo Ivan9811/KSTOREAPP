@@ -20,5 +20,6 @@
     <color name="rojo_claro">#FFE5E5</color>
     <color name="blanco_suave">#EDE7F6</color>
     <color name="primary">#7C3AED</color>
+    <color name="burble_background_gray">#F0F0F0</color>
 
 </resources>

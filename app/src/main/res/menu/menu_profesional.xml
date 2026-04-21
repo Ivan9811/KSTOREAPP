@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_inicio"
+        android:icon="@mipmap/home_icon"
+        android:title="Inicio"/>
+
+    <item
+        android:id="@+id/nav_pedidos"
+        android:icon="@mipmap/pedido_icon"
+        android:title="Pedido"/>
+
+    <item
+        android:id="@+id/nav_publicar"
+        android:icon="@mipmap/new_icon"
+        android:title="Publicar"/>
+
+    <item
+        android:id="@+id/nav_mensajes"
+        android:icon="@mipmap/message_icon"
+        android:title="Mensajes"/>
+
+    <item
+        android:id="@+id/nav_perfil"
+        android:icon="@mipmap/profile_icon"
+        android:title="Perfil"/>
+
+</menu>

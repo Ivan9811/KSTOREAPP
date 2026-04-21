@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Badge + Fecha -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:background="@drawable/bg_chip_orange">
+
+                <ImageView
+                    android:id="@+id/iconBadge"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/star"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvEstado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:layout_marginStart="4dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tvFechaBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="@color/gris"/>
+
+        </LinearLayout>
+
+        <!-- Servicio + Precio -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/iconServicio"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/bolt"
+                android:padding="6dp"
+                android:background="@drawable/bg_category_circle"
+                app:tint="@color/morado_tarjetas"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp">
+
+                <TextView
+                    android:id="@+id/tvServicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Texto1"/>
+
+                <TextView
+                    android:id="@+id/tvProfesional"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/primary"
+                    android:layout_marginTop="2dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPrecio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/morado_tarjetas"/>
+
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/hueso"
+            android:layout_marginVertical="12dp"/>
+
+        <!-- Fecha -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/calendar"
+                app:tint="@color/gris"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fecha"
+                android:textSize="13sp"
+                android:textColor="@color/gris"
+                android:layout_marginStart="6dp"/>
+
+            <TextView
+                android:id="@+id/tvFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/Texto1"/>
+
+        </LinearLayout>
+
+        <!-- Hora -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/lock"
+                app:tint="@color/gris"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hora"
+                android:textSize="13sp"
+                android:textColor="@color/gris"
+                android:layout_marginStart="6dp"/>
+
+            <TextView
+                android:id="@+id/tvHora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/Texto1"/>
+
+        </LinearLayout>
+
+        <!-- Referencia -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/tag"
+                app:tint="@color/gris"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Referencia"
+                android:textSize="13sp"
+                android:textColor="@color/gris"
+                android:layout_marginStart="6dp"/>
+
+            <TextView
+                android:id="@+id/tvReferencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/Texto1"/>
+
+        </LinearLayout>
+
+        <!-- Botones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnChat"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Chat"
+                android:textSize="13sp"
+                android:textColor="@color/morado_tarjetas"
+                android:backgroundTint="@color/blanco_suave"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                app:icon="@drawable/mensajes"
+                app:iconTint="@color/morado_tarjetas"
+                app:iconSize="16dp"
+                app:iconPadding="6dp"
+                style="@style/Widget.MaterialComponents.Button"/>
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="Cancelar"
+                android:textSize="13sp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

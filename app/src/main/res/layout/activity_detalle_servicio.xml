@@ -22,7 +22,7 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:background="#6B2FCC">
+                android:background="@color/morado_opaco">
 
                 <!-- Botón volver -->
                 <ImageView
@@ -33,7 +33,8 @@
                     android:padding="6dp"
                     android:background="@drawable/bg_circle_gray"
                     android:layout_margin="16dp"
-                    android:layout_gravity="top|start"/>
+                    android:layout_gravity="top|start"
+                    app:tint="@color/white"/>
 
                 <!-- Favorito -->
                 <ImageView
@@ -44,15 +45,8 @@
                     android:padding="6dp"
                     android:background="@drawable/bg_circle_gray"
                     android:layout_margin="16dp"
-                    android:layout_gravity="top|end"/>
-
-                <!-- Ícono central -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="⚡"
-                    android:textSize="64sp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="top|end"
+                    app:tint="@color/white"/>
 
             </FrameLayout>
 
@@ -73,7 +67,7 @@
                     <TextView
                         android:layout_width="44dp"
                         android:layout_height="44dp"
-                        android:text="JR"
+                        android:text="@string/jr"
                         android:textColor="@color/white"
                         android:textSize="14sp"
                         android:gravity="center"
@@ -89,24 +83,25 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Juan Rodríguez"
+                            android:text="@string/juan_rodr_guez"
                             android:textStyle="bold"
                             android:textSize="15sp"
-                            android:textColor="#1A1A1A"/>
+                            android:textColor="@color/Texto1"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="⭐⭐⭐⭐⭐ 4.9 (127 reseñas)"
+                            android:text="@string/calificacion"
                             android:textSize="12sp"
-                            android:textColor="#FF9500"/>
+                            android:textColor="@color/dorado"/>
+
                     </LinearLayout>
 
                     <!-- Badge Verificado -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="✓ Verificado"
+                        android:text="@string/verificado"
                         android:textColor="@color/white"
                         android:textSize="11sp"
                         android:paddingHorizontal="10dp"
@@ -119,20 +114,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Instalación Eléctrica Residencial"
+                    android:text="@string/instalaci_n_el_ctrica_residencial"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:textColor="#1A1A1A"
+                    android:textColor="@color/Texto1"
                     android:layout_marginTop="12dp"/>
 
                 <!-- Precio -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="$50/hora"
+                    android:text="@string/_50_hora"
                     android:textSize="22sp"
                     android:textStyle="bold"
-                    android:textColor="#4A0E8F"
+                    android:textColor="@color/morado_tarjetas"
                     android:layout_marginTop="4dp"/>
 
                 <!-- Tags -->
@@ -145,9 +140,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="📍 Bogotá"
+                        android:text="@string/bogot"
                         android:textSize="11sp"
-                        android:textColor="#4A0E8F"
+                        android:textColor="@color/morado_tarjetas"
                         android:paddingHorizontal="10dp"
                         android:paddingVertical="4dp"
                         android:layout_marginEnd="6dp"
@@ -156,9 +151,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="⚡ Electricista"
+                        android:text="@string/electricista"
                         android:textSize="11sp"
-                        android:textColor="#4A0E8F"
+                        android:textColor="@color/morado_tarjetas"
                         android:paddingHorizontal="10dp"
                         android:paddingVertical="4dp"
                         android:layout_marginEnd="6dp"
@@ -167,9 +162,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="🕐 Disponible hoy"
+                        android:text="@string/disponible_hoy"
                         android:textSize="11sp"
-                        android:textColor="#4A0E8F"
+                        android:textColor="@color/morado_tarjetas"
                         android:paddingHorizontal="10dp"
                         android:paddingVertical="4dp"
                         android:background="@drawable/bg_chip_unselected"/>
@@ -180,18 +175,18 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Descripción del Servicio"
+                    android:text="@string/descripci_n_del_servicio"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    android:textColor="#1A1A1A"
+                    android:textColor="@color/Texto1"
                     android:layout_marginTop="16dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Electricista certificado con más de 10 años de experiencia en instalaciones eléctricas residenciales y comerciales. Ofrezco servicios de calidad garantizados, trabajando con las mejores prácticas de seguridad y cumpliendo todas las normativas vigentes."
+                    android:text="@string/electricista_certificado_con_m_s_de_10_a_os_de_experiencia_en_instalaciones_el_ctricas_residenciales_y_comerciales_ofrezco_servicios_de_calidad_garantizados_trabajando_con_las_mejores_pr_cticas_de_seguridad_y_cumpliendo_todas_las_normativas_vigentes"
                     android:textSize="13sp"
-                    android:textColor="#555555"
+                    android:textColor="@color/gris"
                     android:lineSpacingExtra="3dp"
                     android:layout_marginTop="6dp"/>
 
@@ -199,10 +194,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¿Qué incluye?"
+                    android:text="@string/qu_incluye"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    android:textColor="#1A1A1A"
+                    android:textColor="@color/Texto1"
                     android:layout_marginTop="16dp"/>
 
                 <LinearLayout
@@ -212,18 +207,18 @@
                     android:gravity="center_vertical"
                     android:layout_marginTop="8dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="🔍"
-                        android:textSize="16sp"/>
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/search"
+                        app:tint="@color/morado_tarjetas"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Diagnóstico y cotización gratuita"
+                        android:text="@string/diagn_stico_y_cotizaci_n_gratuita"
                         android:textSize="13sp"
-                        android:textColor="#333333"
+                        android:textColor="@color/Texto1"
                         android:layout_marginStart="8dp"/>
 
                 </LinearLayout>
@@ -242,8 +237,7 @@
         android:paddingVertical="10dp"
         android:gravity="center_vertical"
         android:elevation="8dp"
-        app:layout_anchor="@android:id/content"
-        app:layout_anchorGravity="bottom">
+        android:layout_gravity="bottom">
 
         <!-- Botón Chat -->
         <ImageView
@@ -253,7 +247,8 @@
             android:src="@drawable/mensajes"
             android:padding="8dp"
             android:background="@drawable/bg_chip_unselected"
-            android:layout_marginEnd="8dp"/>
+            android:layout_marginEnd="8dp"
+            app:tint="@color/morado_tarjetas"/>
 
         <!-- Botón Calendario -->
         <ImageView
@@ -263,7 +258,8 @@
             android:src="@drawable/calendar"
             android:padding="8dp"
             android:background="@drawable/bg_chip_orange"
-            android:layout_marginEnd="8dp"/>
+            android:layout_marginEnd="8dp"
+            app:tint="@color/white"/>
 
         <!-- Botón Contratar -->
         <Button
@@ -271,10 +267,13 @@
             android:layout_width="0dp"
             android:layout_height="44dp"
             android:layout_weight="1"
-            android:text="Contratar / Agendar →"
+            android:text="@string/contratar_agendar"
             android:textSize="13sp"
-            android:backgroundTint="#4A0E8F"
-            android:textColor="@color/white"/>
+            android:backgroundTint="@color/morado_tarjetas"
+            android:textColor="@color/white"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            style="@style/Widget.MaterialComponents.Button"/>
 
     </LinearLayout>
 

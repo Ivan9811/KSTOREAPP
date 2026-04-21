@@ -1,21 +1,27 @@
 package com.ucompensar.kstoreapp.UI.CLIENTE
 
-import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
 import com.ucompensar.kstoreapp.R
+import com.ucompensar.kstoreapp.UI.BaseActivity
+import com.ucompensar.kstoreapp.UI.CLIENTE.fragments.InicioFragment
+import com.ucompensar.kstoreapp.UI.CLIENTE.fragments.BuscarFragment
+import com.ucompensar.kstoreapp.UI.CLIENTE.fragments.FavoritosFragment
+import com.ucompensar.kstoreapp.UI.CLIENTE.fragments.MensajesFragment
+import com.ucompensar.kstoreapp.UI.CLIENTE.fragments.PerfilClienteFragment
 
-class ClienteActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_cliente)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+class ClienteActivity : BaseActivity() {
+
+    override fun getStatusBarColor()  = "#4A0E8F" // 👈 morado como el diseño
+    override fun getMenuRes()         = R.menu.menu_cliente
+    override fun getFragmentInicial() = InicioFragment()
+
+
+    override fun onNavItemSelected(itemId: Int): Fragment? = when (itemId) {
+        R.id.nav_inicio     -> InicioFragment()
+        R.id.nav_buscar     -> BuscarFragment()
+        R.id.nav_favoritos  -> FavoritosFragment()
+        R.id.nav_mensajes   -> MensajesFragment()
+        R.id.nav_perfil     -> PerfilClienteFragment()
+        else                -> null
     }
 }

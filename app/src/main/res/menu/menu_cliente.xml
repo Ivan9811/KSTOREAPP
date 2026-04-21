@@ -4,26 +4,26 @@
     <item
         android:id="@+id/nav_inicio"
         android:icon="@drawable/inicio"
-        android:title="Inicio"/>
+        android:title="@string/inicio"/>
 
     <item
         android:id="@+id/nav_buscar"
         android:icon="@drawable/search"
-        android:title="Buscar"/>
+        android:title="@string/buscar"/>
 
     <item
         android:id="@+id/nav_favoritos"
         android:icon="@drawable/favorito"
-        android:title="Favoritos"/>
+        android:title="@string/favoritos"/>
 
     <item
         android:id="@+id/nav_mensajes"
         android:icon="@drawable/mensajes"
-        android:title="Mensajes"/>
+        android:title="@string/mensajes"/>
 
     <item
         android:id="@+id/nav_perfil"
         android:icon="@drawable/photoperfil"
-        android:title="Perfil"/>
+        android:title="@string/perfil"/>
 
 </menu>

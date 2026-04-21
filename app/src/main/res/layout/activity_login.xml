@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@android:color/white">
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             android:text="@string/Nombre_app"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:textColor="#333333"
+            android:textColor="@color/Texto1"
             android:layout_marginTop="8dp"/>
 
         <!-- Subtítulo -->
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:text="@string/text_inicio_login"
             android:textSize="14sp"
-            android:textColor="#888888"
+            android:textColor="@color/gris"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="24dp"/>
 
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:text="@string/correo_electr_nico"
             android:textSize="13sp"
-            android:textColor="#333333"
+            android:textColor="@color/Texto1"
             android:textStyle="bold"/>
 
         <!-- Campo email -->
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:text="@string/contrase_a"
             android:textSize="13sp"
-            android:textColor="#333333"
+            android:textColor="@color/Texto1"
             android:textStyle="bold"/>
 
         <!-- Campo contraseña -->
@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/check_rocordar"
                 android:textSize="13sp"
-                android:textColor="#555555"/>
+                android:textColor="@color/gris"/>
 
             <View
                 android:layout_width="0dp"
@@ -113,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/olvidaste_tu_contrase_a"
                 android:textSize="13sp"
-                android:textColor="#6200EE"/>
+                android:textColor="@color/morado"/>
 
         </LinearLayout>
 
@@ -124,8 +124,8 @@
             android:layout_height="52dp"
             android:text="@string/btn_iniciar_sesion"
             android:textSize="16sp"
-            android:textColor="@android:color/white"
-            android:backgroundTint="#6200EE"/>
+            android:textColor="@color/white"
+            android:backgroundTint="@color/morado"/>
 
         <!-- O continúa con -->
         <TextView
@@ -133,7 +133,7 @@
             android:layout_height="wrap_content"
             android:text="@string/text_google"
             android:textSize="13sp"
-            android:textColor="#888888"
+            android:textColor="@color/gris"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="12dp"/>
 
@@ -144,8 +144,8 @@
             android:layout_height="52dp"
             android:text="@string/iniciar_google"
             android:textSize="14sp"
-            android:textColor="#333333"
-            android:backgroundTint="@android:color/white"
+            android:textColor="@color/Texto1"
+            android:backgroundTint="@color/white"
             android:layout_marginBottom="16dp"/>
 
         <!-- Botón Biometría -->
@@ -155,8 +155,8 @@
             android:layout_height="52dp"
             android:text="@string/ingreso_huella"
             android:textSize="14sp"
-            android:textColor="#333333"
-            android:backgroundTint="@android:color/white"
+            android:textColor="@color/Texto1"
+            android:backgroundTint="@color/white"
             android:layout_marginBottom="16dp"/>
 
         <!-- ¿No tienes cuenta? -->
@@ -170,7 +170,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/no_tienes_cuenta"
                 android:textSize="13sp"
-                android:textColor="#555555"/>
+                android:textColor="@color/gris"/>
 
             <TextView
                 android:id="@+id/tvRegistrate"
@@ -178,7 +178,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/registro_gratis"
                 android:textSize="13sp"
-                android:textColor="#6200EE"/>
+                android:textColor="@color/morado"/>
 
         </LinearLayout>
 
@@ -189,8 +189,8 @@
             android:layout_height="52dp"
             android:text="@string/btn_volver"
             android:textSize="14sp"
-            android:textColor="#333333"
-            android:backgroundTint="@android:color/white"
+            android:textColor="@color/Texto1"
+            android:backgroundTint="@color/white"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="32dp"/>
 

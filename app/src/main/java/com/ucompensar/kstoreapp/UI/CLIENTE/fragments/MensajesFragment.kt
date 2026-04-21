@@ -1,60 +1,44 @@
 package com.ucompensar.kstoreapp.UI.CLIENTE.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.ucompensar.kstoreapp.R
+import com.ucompensar.kstoreapp.UI.CLIENTE.MensajesAdapter
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [MensajesFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class MensajesFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_mensajes, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment MensajesFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            MensajesFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Datos de prueba
+        val mensajes = listOf(
+            MensajeItem("CL", "Carlos López",  "¿Estás disponible el viernes?",    "5 min", online = true,  noLeidos = 2),
+            MensajeItem("MG", "Miguel Gómez",  "El trabajo quedó perfecto, gracias!", "1h",  online = false, noLeidos = 0),
+            MensajeItem("AS", "Ana Silva",     "Te enviamos la cotización",          "3h",   online = true,  noLeidos = 1),
+            MensajeItem("PV", "Pedro Vargas",  "Confirmó para el lunes a las 9am",  "Ayer",  online = false, noLeidos = 0)
+        )
+
+        val recycler = view.findViewById<RecyclerView>(R.id.rvMensajes)
+        recycler.layoutManager = LinearLayoutManager(requireContext())
+        recycler.addItemDecoration(
+            DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)
+        )
+        recycler.adapter = MensajesAdapter(mensajes) { item ->
+            Toast.makeText(requireContext(), "Chat con ${item.nombre}", Toast.LENGTH_SHORT).show()
+        }
     }
 }

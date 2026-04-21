@@ -1,14 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.CLIENTE.fragments.FavoritosFragment">
+    android:orientation="vertical"
+    android:background="@color/white">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- ===== HEADER ===== -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="@color/white"
+        android:layout_marginTop="25dp"
+        >
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/btnVolver"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/arrow_back"
+            android:padding="6dp"
+            app:tint="@color/Texto1"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mis Favoritos"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/Texto1"
+            android:gravity="center"
+            android:paddingTop="10dp"/>
+
+        <View
+            android:layout_width="36dp"
+            android:layout_height="36dp"/>
+
+    </LinearLayout>
+
+    <!-- ===== CONTENIDO VACÍO CENTRADO ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingHorizontal="32dp">
+
+        <!-- Ícono corazón -->
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/favorito"
+            app:tint="#FF3B30"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aún no tienes favoritos"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/Texto1"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Subtítulo -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toca el "
+                android:textSize="13sp"
+                android:textColor="@color/gris"
+                android:gravity="center"/>
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/favorito"
+                app:tint="#FF3B30"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" en cualquier servicio para guardarlo aquí"
+                android:textSize="13sp"
+                android:textColor="@color/gris"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <!-- Botón -->
+        <Button
+            android:id="@+id/btnExplorar"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Explorar servicios"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primary"
+            android:paddingHorizontal="32dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            style="@style/Widget.MaterialComponents.Button"/>
+
+    </LinearLayout>
+
+</LinearLayout>

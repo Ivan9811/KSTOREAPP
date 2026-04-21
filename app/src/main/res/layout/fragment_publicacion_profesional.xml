@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".UI.PROFESIONAL.fragments.publicacionProfesional">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header: Botón Atrás y Título -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_circle_gray"
+                android:padding="10dp"
+                android:src="@drawable/flechaizquierda"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/nueva_publicaci_n"
+                android:textColor="@color/titulos_color"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Campo: Título del Servicio -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/t_tulo_del_servicio"
+            android:textColor="@color/titulos_color"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/input"
+            android:hint="@string/ej_instalaci_n_el_ctrica_residencial"
+            android:paddingHorizontal="16dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Campo: Categoría -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categoría"
+            android:textColor="@color/titulos_color"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/input"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp"
+            android:text="@string/selecciona_una_categor_a"
+            android:textColor="#888888"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Campo: Descripción -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/descripci_n"
+            android:textColor="@color/titulos_color"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/input"
+            android:gravity="top"
+            android:hint="@string/describe_tu_servicio_en_detalle"
+            android:padding="16dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Campo: Precio -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/precio"
+            android:textColor="@color/titulos_color"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@drawable/input"
+                android:hint="@string/_50"
+                android:inputType="number"
+                android:paddingHorizontal="16dp"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@drawable/input"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp"
+                android:text="@string/por_hora"
+                android:textColor="@color/_1a1a1a" />
+        </LinearLayout>
+
+        <!-- Campo: Disponibilidad -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/disponibilidadprofesional"
+            android:textColor="@color/titulos_color"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="7"
+            android:layout_marginBottom="32dp">
+
+            <!-- Lun (seleccionado) -->
+            <TextView
+                android:id="@+id/diaLun"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="@string/lunes"
+                android:textSize="11sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_chip_selected"/>
+
+            <!-- Mar (seleccionado) -->
+            <TextView
+                android:id="@+id/diaMar"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="@string/martes"
+                android:textSize="11sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_chip_selected"/>
+
+            <!-- Mié (seleccionado) -->
+            <TextView
+                android:id="@+id/diaMie"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="@string/miercoles"
+                android:textSize="11sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_chip_selected"/>
+
+            <!-- Jue (seleccionado) -->
+            <TextView
+                android:id="@+id/diaJue"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="@string/jueves"
+                android:textSize="11sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_chip_selected"/>
+
+            <!-- Vie (seleccionado) -->
+            <TextView
+                android:id="@+id/diaVie"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="@string/viernes"
+                android:textSize="11sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_chip_selected"/>
+
+            <!-- Sáb (no seleccionado) -->
+            <TextView
+                android:id="@+id/diaSab"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="@string/s_bado"
+                android:textSize="11sp"
+                android:textColor="@color/morado_tarjetas"
+                android:gravity="center"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_chip_unselected"/>
+
+            <!-- Dom (no seleccionado) -->
+            <TextView
+                android:id="@+id/diaDom"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="@string/domingo"
+                android:textSize="11sp"
+                android:textColor="@color/morado_tarjetas"
+                android:gravity="center"
+                android:background="@drawable/bg_chip_unselected"/>
+
+        </LinearLayout>
+
+        <!-- Campo: Fotos -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fotos_del_trabajo"
+            android:textColor="@color/titulos_color"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/input"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/camerapro" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Agregar fotos"
+                android:textColor="@color/primary"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

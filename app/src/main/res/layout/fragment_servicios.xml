@@ -3,13 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F5F5F5">
+    android:background="@color/pantalla">
 
     <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#4A0E8F"
+        android:background="@color/morado_tarjetas"
         android:padding="16dp"
         android:orientation="horizontal"
         android:gravity="center_vertical">
@@ -23,15 +23,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Panel de Control"
-                android:textColor="#CCFFFFFF"
+                android:text="@string/panel_de_control"
+                android:textColor="@color/white"
                 android:textSize="12sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Servicios"
-                android:textColor="@android:color/white"
+                android:text="@string/fragment_servicio"
+                android:textColor="@color/white"
                 android:textSize="22sp"
                 android:textStyle="bold"/>
 
@@ -42,7 +42,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@android:drawable/ic_menu_rotate"
-            android:background="#5C1A9E"
+            android:background="@color/morado_opaco"
             android:layout_marginEnd="8dp"/>
 
         <ImageButton
@@ -50,7 +50,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@android:drawable/ic_menu_save"
-            android:background="#5C1A9E"/>
+            android:background="@color/morado_opaco"/>
 
     </LinearLayout>
 
@@ -69,10 +69,10 @@
                 android:id="@+id/etBuscarServicio"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="Buscar por servicio o prestador..."
+                android:hint="@string/text_buscador"
                 android:paddingStart="16dp"
                 android:inputType="text"
-                android:background="@android:color/white"/>
+                android:background="@color/white"/>
 
             <!-- Filtros -->
             <HorizontalScrollView
@@ -90,9 +90,9 @@
                         android:id="@+id/btnTodos"
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
-                        android:text="Todos (2,180)"
-                        android:backgroundTint="#6200EE"
-                        android:textColor="@android:color/white"
+                        android:text="@string/btn_filtro"
+                        android:backgroundTint="@color/morado"
+                        android:textColor="@color/white"
                         android:textSize="12sp"
                         android:layout_marginEnd="8dp"/>
 
@@ -100,9 +100,9 @@
                         android:id="@+id/btnActivos"
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
-                        android:text="✓ Activos"
-                        android:backgroundTint="@android:color/white"
-                        android:textColor="#333333"
+                        android:text="@string/btn_filtro1"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/Texto1"
                         android:textSize="12sp"
                         android:layout_marginEnd="8dp"/>
 
@@ -110,9 +110,9 @@
                         android:id="@+id/btnRevision"
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
-                        android:text="En revisión"
-                        android:backgroundTint="@android:color/white"
-                        android:textColor="#333333"
+                        android:text="@string/btn_filtro2"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/Texto1"
                         android:textSize="12sp"/>
 
                 </LinearLayout>
@@ -131,7 +131,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@android:color/white"
+                    android:background="@color/white"
                     android:orientation="vertical"
                     android:padding="12dp"
                     android:gravity="center"
@@ -141,17 +141,17 @@
                         android:id="@+id/tvTotalActivos"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2,051"
+                        android:text="@string/estadisticas_servicio1"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#6200EE"/>
+                        android:textColor="@color/morado"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Activos"
+                        android:text="@string/estadisticas_servicio1_1"
                         android:textSize="11sp"
-                        android:textColor="#888888"/>
+                        android:textColor="@color/blanco_filtro"/>
 
                 </LinearLayout>
 
@@ -159,7 +159,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@android:color/white"
+                    android:background="@color/white"
                     android:orientation="vertical"
                     android:padding="12dp"
                     android:gravity="center"
@@ -169,17 +169,17 @@
                         android:id="@+id/tvTotalRevision"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="89"
+                        android:text="@string/estadisticas_servicio2"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#FF8F00"/>
+                        android:textColor="@color/dorado"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="En revisión"
+                        android:text="@string/estadistica_servicio2_1"
                         android:textSize="11sp"
-                        android:textColor="#888888"/>
+                        android:textColor="@color/blanco_filtro"/>
 
                 </LinearLayout>
 
@@ -187,7 +187,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@android:color/white"
+                    android:background="@color/white"
                     android:orientation="vertical"
                     android:padding="12dp"
                     android:gravity="center">
@@ -196,17 +196,17 @@
                         android:id="@+id/tvTotalReportados"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="12"
+                        android:text="@string/estadisticas_servicio3"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#D32F2F"/>
+                        android:textColor="@color/rojo_caida"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Reportados"
+                        android:text="@string/estadisticas_servicio3_1"
                         android:textSize="11sp"
-                        android:textColor="#888888"/>
+                        android:textColor="@color/blanco_filtro"/>
 
                 </LinearLayout>
 
@@ -225,9 +225,9 @@
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:text="✓ Aprobar pendientes (89)"
-                    android:backgroundTint="#E8F5E9"
-                    android:textColor="#2E7D32"
+                    android:text="@string/btn_pendientes"
+                    android:backgroundTint="@color/verde_claro"
+                    android:textColor="@color/verde_oscuro"
                     android:textSize="11sp"
                     android:layout_marginEnd="8dp"/>
 
@@ -236,9 +236,9 @@
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:text="Ver reportados (12)"
-                    android:backgroundTint="#FFE5E5"
-                    android:textColor="#D32F2F"
+                    android:text="@string/btn_aprobados"
+                    android:backgroundTint="@color/rojo_claro"
+                    android:textColor="@color/rojo_caida"
                     android:textSize="11sp"/>
 
             </LinearLayout>
@@ -247,9 +247,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SERVICIOS RECIENTES"
+                android:text="@string/servicios_recientes"
                 android:textSize="12sp"
-                android:textColor="#888888"
+                android:textColor="@color/blanco_filtro"
                 android:textStyle="bold"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"/>

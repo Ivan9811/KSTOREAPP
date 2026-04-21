@@ -3,28 +3,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F5F5F5">
+    android:background="@color/pantalla">
 
     <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#4A0E8F"
+        android:background="@color/morado_tarjetas"
         android:padding="16dp"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Panel de Control"
-            android:textColor="#CCFFFFFF"
+            android:text="@string/panel_de_control"
+            android:textColor="@color/white"
             android:textSize="12sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Usuarios"
-            android:textColor="@android:color/white"
+            android:text="@string/usuarios_fragment"
+            android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold"/>
 
@@ -45,7 +45,7 @@
                 android:id="@+id/etBuscar"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="Buscar usuario por nombre o email..."
+                android:hint="@string/buscador_usuario"
                 android:paddingStart="16dp"
                 android:drawableStart="@drawable/search"
                 android:inputType="text"/>
@@ -66,36 +66,36 @@
                         android:id="@+id/btnTodos"
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
-                        android:text="Todos (5,248)"
-                        android:backgroundTint="#6200EE"
-                        android:textColor="@android:color/white"
+                        android:text="@string/btn_todos"
+                        android:backgroundTint="@color/morado"
+                        android:textColor="@color/white"
                         android:textSize="12sp"/>
 
                     <Button
                         android:id="@+id/btnClientes"
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
-                        android:text="Clientes"
-                        android:backgroundTint="@android:color/white"
-                        android:textColor="#333333"
+                        android:text="@string/btn_clientes"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/Texto1"
                         android:textSize="12sp"/>
 
                     <Button
                         android:id="@+id/btnPrestadores"
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
-                        android:text="Prestadores"
-                        android:backgroundTint="@android:color/white"
-                        android:textColor="#333333"
+                        android:text="@string/btn_prestadores"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/Texto1"
                         android:textSize="12sp"/>
 
                     <Button
                         android:id="@+id/btnPendientes"
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
-                        android:text="Pendientes"
-                        android:backgroundTint="@android:color/white"
-                        android:textColor="#333333"
+                        android:text="@string/btn_pendiente"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/Texto1"
                         android:textSize="12sp"/>
 
                 </LinearLayout>
@@ -113,7 +113,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@android:color/white"
+                    android:background="@color/white"
                     android:orientation="vertical"
                     android:padding="12dp"
                     android:gravity="center"
@@ -123,7 +123,7 @@
                         android:id="@+id/tvTotalClientes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="3,355"
+                        android:text="@string/estadisticas_usuario1"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:textColor="#333333"/>
@@ -131,7 +131,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Clientes"
+                        android:text="@string/estadisticas_usuario1_1"
                         android:textSize="12sp"
                         android:textColor="#888888"/>
                 </LinearLayout>
@@ -140,7 +140,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@android:color/white"
+                    android:background="@color/white"
                     android:orientation="vertical"
                     android:padding="12dp"
                     android:gravity="center"
@@ -150,24 +150,24 @@
                         android:id="@+id/tvTotalPrestadores"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1,893"
+                        android:text="@string/estadisticas_usuario2"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#333333"/>
+                        android:textColor="@color/Texto1"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Prestadores"
+                        android:text="@string/estadisticas_usuario2_1"
                         android:textSize="12sp"
-                        android:textColor="#888888"/>
+                        android:textColor="@color/blanco_filtro"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@android:color/white"
+                    android:background="@color/white"
                     android:orientation="vertical"
                     android:padding="12dp"
                     android:gravity="center">
@@ -176,17 +176,17 @@
                         android:id="@+id/tvTotalPendientes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="47"
+                        android:text="@string/estadisticas_usuario3"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#FF6B00"/>
+                        android:textColor="@color/dorado"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pendientes"
+                        android:text="@string/estadisticas_usuario3_1"
                         android:textSize="12sp"
-                        android:textColor="#888888"/>
+                        android:textColor="@color/blanco_filtro"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -205,7 +205,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="⚠️ 47 prestadores esperan verificación"
+                    android:text="@string/prestadores_pendientes"
                     android:textColor="#856404"
                     android:textSize="13sp"/>
 
@@ -213,7 +213,7 @@
                     android:id="@+id/btnRevisar"
                     android:layout_width="wrap_content"
                     android:layout_height="36dp"
-                    android:text="Revisar"
+                    android:text="@string/btn_revisar"
                     android:backgroundTint="#FF6B00"
                     android:textColor="@android:color/white"
                     android:textSize="12sp"/>
@@ -225,7 +225,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="USUARIOS RECIENTES"
+                android:text="@string/usuarios_recientes"
                 android:textSize="12sp"
                 android:textColor="#888888"
                 android:textStyle="bold"/>
@@ -244,7 +244,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginTop="12dp"
-                android:text="Cargar más usuarios →"
+                android:text="@string/cargar_usuarios"
                 android:backgroundTint="@android:color/white"
                 android:textColor="#6200EE"/>
 

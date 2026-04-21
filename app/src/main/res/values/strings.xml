@@ -136,6 +136,7 @@
     <string name="prestador3_3">🧹 Limpieza · 201 servicios</string>
     <string name="prestador3_4">$4,860</string>
     <string name="btn_pdf">📋 Exportar Reportes a PDF</string>
+    <string name="title_activity_base">BaseActivity</string>
 
 
 </resources>

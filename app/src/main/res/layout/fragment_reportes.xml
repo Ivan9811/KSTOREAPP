@@ -62,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:orientation="horizontal"
-                android:background="@color/white"
+                android:backgroundTint="@color/white"
                 android:weightSum="4">
 
                 <Button

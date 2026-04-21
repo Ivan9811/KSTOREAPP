@@ -5,6 +5,20 @@
     <color name="gris">#9b9b9b</color>
     <color name="dorado">#F59E0B</color>
     <color name="hueso">#F5F3FF</color>
+    <color name="morado_opaco">#5C1A9E</color>
+    <color name="blanco_filtro">#888888</color>
+    <color name="morado">#6200EE</color>
+    <color name="pantalla">#F5F5F5</color>
+    <color name="morado_tarjetas">#4A0E8F</color>
+    <color name="verde_claro">#00E676</color>
+    <color name="barras">#80FFFFFF</color>
+    <color name="Texto1">#333333</color>
+    <color name="rojo_caida">#D32F2F</color>
+    <color name="azul">#2196F3</color>
+    <color name="fucsia">#E91E63</color>
+    <color name="verde_oscuro">#2E7D32</color>
+    <color name="rojo_claro">#FFE5E5</color>
+    <color name="blanco_suave">#EDE7F6</color>
     <color name="primary">#7C3AED</color>
 
 </resources>

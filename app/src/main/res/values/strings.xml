@@ -138,5 +138,64 @@
     <string name="btn_pdf">📋 Exportar Reportes a PDF</string>
     <string name="title_activity_base">BaseActivity</string>
 
+    <!-- servicios -->
+    <string name="fragment_servicio">Servicios</string>
+    <string name="text_buscador">Buscar por servicio o prestador...</string>
+    <string name="btn_filtro">Todos (2,180)</string>
+    <string name="btn_filtro1">✓ Activos</string>
+    <string name="btn_filtro2">En revisión</string>
+    <string name="estadisticas_servicio1">2,051</string>
+    <string name="estadisticas_servicio1_1">Activos</string>
+    <string name="estadisticas_servicio2">89</string>
+    <string name="estadistica_servicio2_1">En revisión</string>
+    <string name="estadisticas_servicio3">12</string>
+    <string name="estadisticas_servicio3_1">Reportados</string>
+    <string name="btn_pendientes">✓ Aprobar pendientes (89)</string>
+    <string name="btn_aprobados">Ver reportados (12)</string>
+    <string name="servicios_recientes">SERVICIOS RECIENTES</string>
+
+    <!-- usuarios -->
+    <string name="usuarios_fragment">Usuarios</string>
+    <string name="buscador_usuario">Buscar usuario por nombre o email...</string>
+    <string name="btn_todos">Todos (5,248)</string>
+    <string name="btn_clientes">Clientes</string>
+    <string name="btn_prestadores">Prestadores</string>
+    <string name="btn_pendiente">Pendientes</string>
+    <string name="estadisticas_usuario1">3,355</string>
+    <string name="estadisticas_usuario1_1">Clientes</string>
+    <string name="estadisticas_usuario2">1,893</string>
+    <string name="estadisticas_usuario2_1">Prestadores</string>
+    <string name="estadisticas_usuario3">47</string>
+    <string name="estadisticas_usuario3_1">Pendientes</string>
+    <string name="prestadores_pendientes">⚠️ 47 prestadores esperan verificación</string>
+    <string name="btn_revisar">Revisar</string>
+    <string name="usuarios_recientes">USUARIOS RECIENTES</string>
+    <string name="cargar_usuarios">Cargar más usuarios →</string>
+
+    <!-- dashboard -->
+    <string name="administrador">Administrador</string>
+    <string name="text_bienvenida">Bienvenido de vuelta</string>
+    <string name="titulo_fragment">Administrador_prueba</string>
+    <string name="administrador_cuenta">Administrador</string>
+    <string name="sistema_activo">● Sistema activo</string>
+    <string name="estadisticas_dashboard_usuarios">5,248</string>
+    <string name="estadisticas_dashboard_usuarios1">Usuarios Totales</string>
+    <string name="estadisticas_dashboard_usuarios1_1">↑ +124 esta semana</string>
+    <string name="estadisticas_dashboard_prestadores">1,893</string>
+    <string name="estadisticas_dashboard_prestadores1">Prestadores Activos</string>
+    <string name="estadisticas_dashboard_prestadores1_1">↑ +38 nuevos</string>
+    <string name="estadisticas_dashboard_servicios">342</string>
+    <string name="estadisticas_dashboard_servicios1">Servicios Hoy</string>
+    <string name="estadisticas_dashboard_servicios1_1">↑ +15%</string>
+    <string name="estadisticas_dashboard_ingresos">$48.2K</string>
+    <string name="estadisticas_dashboard_ingresos1">Ingresos Mes</string>
+    <string name="estadisticas_dashboard_ingresos1_1">↑ +22%</string>
+    <string name="acciones_r_pidas">ACCIONES RÁPIDAS</string>
+    <string name="btn_usuarios">Usuarios</string>
+    <string name="btn_servicios">Servicios</string>
+    <string name="btn_reportes">Reportes</string>
+    <string name="btn_configuracion">Configuración</string>
+    <string name="btn_ver_usuarios">Ver todos los usuarios →</string>
+
 
 </resources>

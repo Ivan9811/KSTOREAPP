@@ -12,8 +12,10 @@ import com.ucompensar.kstoreapp.UI.CLIENTE.fragments.BuscarFragment
 import com.ucompensar.kstoreapp.UI.CLIENTE.fragments.FavoritosFragment
 import com.ucompensar.kstoreapp.UI.CLIENTE.fragments.InicioFragment
 import com.ucompensar.kstoreapp.UI.CLIENTE.fragments.MensajesFragment
+import com.ucompensar.kstoreapp.UI.CLIENTE.fragments.MisPedidosFragment
 import com.ucompensar.kstoreapp.UI.CLIENTE.fragments.PerfilClienteFragment
 import com.ucompensar.kstoreapp.UI.PROFESIONAL.fragments.publicacionProfesional
+import com.ucompensar.kstoreapp.UI.PROFESIONAL.fragments.InicioProfesionalFragments
 
 class ProfesionalActivity :  BaseActivity() {
 
@@ -23,8 +25,8 @@ class ProfesionalActivity :  BaseActivity() {
 
 
     override fun onNavItemSelected(itemId: Int): Fragment? = when (itemId) {
-        R.id.nav_inicio     -> InicioFragment()
-        R.id.nav_pedidos    -> BuscarFragment()
+        R.id.nav_inicio     -> InicioProfesionalFragments()
+        R.id.nav_pedidos    -> MisPedidosFragment()
         R.id.nav_publicar  -> publicacionProfesional()
         R.id.nav_mensajes  -> MensajesFragment()
         R.id.nav_perfil     -> PerfilClienteFragment()

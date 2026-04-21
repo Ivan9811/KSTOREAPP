@@ -22,5 +22,7 @@
     <color name="primary">#7C3AED</color>
     <color name="tarjeta_revisar">#FFF3CD</color>
     <color name="burble_background_gray">#F0F0F0</color>
+    <color name="titulos_color">#1E1B4B</color>
+    <color name="_1a1a1a">#1A1A1A</color>
 
 </resources>

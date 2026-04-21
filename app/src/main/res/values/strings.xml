@@ -307,6 +307,16 @@
     <string name="eliminar">Eliminar</string>
     <string name="inicio">Inicio</string>
     <string name="perfil">Perfil</string>
+    <string name="nueva_publicaci_n">Nueva Publicación</string>
+    <string name="t_tulo_del_servicio">Título del Servicio</string>
+    <string name="ej_instalaci_n_el_ctrica_residencial">Ej: Instalación Eléctrica Residencial</string>
+    <string name="selecciona_una_categor_a">Selecciona una categoría</string>
+    <string name="descripci_n">Descripción</string>
+    <string name="describe_tu_servicio_en_detalle">Describe tu servicio en detalle...</string>
+    <string name="precio">Precio</string>
+    <string name="por_hora">Por hora</string>
+    <string name="disponibilidadprofesional">Disponibilidad</string>
+    <string name="fotos_del_trabajo">Fotos del Trabajo</string>
     <string name="juan_rodrigues_gmail_com">juan.rodrigues@gmail.com</string>
 
 

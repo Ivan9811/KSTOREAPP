@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KSTOREAPP">
         <activity
+            android:name=".UI.CLIENTE.EditarPerfilActivity"
+            android:exported="false" />
+        <activity
             android:name=".UI.CLIENTE.DetalleServicioActivity"
             android:exported="false" />
         <activity
@@ -40,7 +43,6 @@
         <activity
             android:name=".UI.ADMIN.AdminActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">

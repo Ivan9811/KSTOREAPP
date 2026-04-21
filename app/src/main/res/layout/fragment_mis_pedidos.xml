@@ -4,43 +4,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@color/pantalla">
 
     <!-- ===== HEADER ===== -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="56dp"
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:paddingHorizontal="16dp"
         android:background="@color/white">
 
+        <ImageView
+            android:id="@+id/btnVolver"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/arrow_back"
+            android:padding="6dp"
+            app:tint="@color/Texto1"/>
+
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Mensajes"
-            android:textSize="22sp"
+            android:text="Mis Pedidos"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/Texto1"/>
+            android:textColor="@color/Texto1"
+            android:gravity="center"/>
 
-        <ImageView
-            android:layout_width="38dp"
-            android:layout_height="38dp"
-            android:src="@drawable/edit"
-            android:padding="8dp"
-            android:background="@drawable/bg_circle_gray"
-            app:tint="@color/Texto1"/>
+        <View
+            android:layout_width="36dp"
+            android:layout_height="36dp"/>
 
     </LinearLayout>
 
     <!-- ===== RECYCLER ===== -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvMensajes"
+        android:id="@+id/rvPedidos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none"
-        android:clipToPadding="false"
-        android:paddingBottom="8dp"/>
+        android:padding="16dp"
+        android:clipToPadding="false"/>
 
 </LinearLayout>

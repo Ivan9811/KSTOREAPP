@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- ===== HEADER ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/btnVolver"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/arrow_back"
+            android:padding="6dp"
+            app:tint="@color/Texto1"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/editar_perfil"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/Texto1"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="36dp"
+            android:layout_height="36dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="24dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ===== AVATAR ===== -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:text="@string/jr"
+                    android:textColor="@color/white"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/bg_avatar_purple"/>
+
+                <!-- Botón cámara -->
+                <LinearLayout
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_avatar_purple"
+                    android:layout_gravity="bottom|end">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/camera"
+                        app:tint="@color/white"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <!-- ===== NOMBRE COMPLETO ===== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre_completo"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/Texto1"
+                android:layout_marginBottom="6dp"/>
+
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/juan_rodr_guezz"
+                android:textSize="14sp"
+                android:textColor="@color/Texto1"
+                android:paddingHorizontal="14dp"
+                android:background="@drawable/bg_input_outline"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- ===== CORREO ===== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/correo_electr_nico"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/Texto1"
+                android:layout_marginBottom="6dp"/>
+
+            <EditText
+                android:id="@+id/etCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/juan_rodriguez_email_com"
+                android:textSize="14sp"
+                android:textColor="@color/Texto1"
+                android:paddingHorizontal="14dp"
+                android:background="@drawable/bg_input_outline"
+                android:inputType="textEmailAddress"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- ===== TELÉFONO ===== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tel_fono"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/Texto1"
+                android:layout_marginBottom="6dp"/>
+
+            <EditText
+                android:id="@+id/etTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/_57_310_456_7890"
+                android:textSize="14sp"
+                android:textColor="@color/Texto1"
+                android:paddingHorizontal="14dp"
+                android:background="@drawable/bg_input_outline"
+                android:inputType="phone"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- ===== CIUDAD ===== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ciudad"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/Texto1"
+                android:layout_marginBottom="6dp"/>
+
+            <EditText
+                android:id="@+id/etCiudad"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/ejemplo_ciudad"
+                android:textSize="14sp"
+                android:textColor="@color/Texto1"
+                android:paddingHorizontal="14dp"
+                android:background="@drawable/bg_input_outline"
+                android:inputType="text"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- ===== DESCRIPCIÓN PROFESIONAL ===== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/descripci_n_profesional"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/Texto1"
+                android:layout_marginBottom="6dp"/>
+
+            <EditText
+                android:id="@+id/etDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="@string/electricista_certificado_con_m_s_de_10_a_os_de_experiencia_en_instalaciones_residenciales_y_comerciales_trabajo_garantizado"
+                android:textSize="14sp"
+                android:textColor="@color/Texto1"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="12dp"
+                android:background="@drawable/bg_input_outline"
+                android:inputType="textMultiLine"
+                android:gravity="top"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- ===== PRECIO POR HORA ===== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/precio_por_hora_usd"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/Texto1"
+                android:layout_marginBottom="6dp"/>
+
+            <EditText
+                android:id="@+id/etPrecio"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/_50"
+                android:textSize="14sp"
+                android:textColor="@color/Texto1"
+                android:paddingHorizontal="14dp"
+                android:background="@drawable/bg_input_outline"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- ===== DISPONIBILIDAD ===== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/disponibilidad"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/Texto1"
+                android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="7"
+                android:layout_marginBottom="32dp">
+
+                <!-- Lun (seleccionado) -->
+                <TextView
+                    android:id="@+id/diaLun"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:text="@string/lunes"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/bg_chip_selected"/>
+
+                <!-- Mar (seleccionado) -->
+                <TextView
+                    android:id="@+id/diaMar"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:text="@string/martes"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/bg_chip_selected"/>
+
+                <!-- Mié (seleccionado) -->
+                <TextView
+                    android:id="@+id/diaMie"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:text="@string/miercoles"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/bg_chip_selected"/>
+
+                <!-- Jue (seleccionado) -->
+                <TextView
+                    android:id="@+id/diaJue"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:text="@string/jueves"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/bg_chip_selected"/>
+
+                <!-- Vie (seleccionado) -->
+                <TextView
+                    android:id="@+id/diaVie"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:text="@string/viernes"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/bg_chip_selected"/>
+
+                <!-- Sáb (no seleccionado) -->
+                <TextView
+                    android:id="@+id/diaSab"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:text="@string/s_bado"
+                    android:textSize="11sp"
+                    android:textColor="@color/morado_tarjetas"
+                    android:gravity="center"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/bg_chip_unselected"/>
+
+                <!-- Dom (no seleccionado) -->
+                <TextView
+                    android:id="@+id/diaDom"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:text="@string/domingo"
+                    android:textSize="11sp"
+                    android:textColor="@color/morado_tarjetas"
+                    android:gravity="center"
+                    android:background="@drawable/bg_chip_unselected"/>
+
+            </LinearLayout>
+
+            <!-- ===== BOTÓN GUARDAR ===== -->
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="@string/guardar_cambios"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primary"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.MaterialComponents.Button"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -204,6 +204,36 @@
     <string name="Valor_Ingresos_Profesional">$2,840</string>
     <string name="en_curso_ahora">En Curso Ahora</string>
     <string name="solicitudes_nuevas">Solicitudes Nuevas</string>
+    <string name="jr">JR</string>
+    <string name="juan_rodr_guez">Juan Rodríguez</string>
+    <string name="calificacion">⭐⭐⭐⭐⭐ 4.9 (127 reseñas)</string>
+    <string name="verificado">Verificado</string>
+    <string name="instalaci_n_el_ctrica_residencial">Instalación Eléctrica Residencial</string>
+    <string name="_50_hora">$50/hora</string>
+    <string name="bogot">Bogotá</string>
+    <string name="disponible_hoy">🕐 Disponible hoy</string>
+    <string name="descripci_n_del_servicio">Descripción del Servicio</string>
+    <string name="electricista_certificado_con_m_s_de_10_a_os_de_experiencia_en_instalaciones_el_ctricas_residenciales_y_comerciales_ofrezco_servicios_de_calidad_garantizados_trabajando_con_las_mejores_pr_cticas_de_seguridad_y_cumpliendo_todas_las_normativas_vigentes">Electricista certificado con más de 10 años de experiencia en instalaciones eléctricas residenciales y comerciales. Ofrezco servicios de calidad garantizados, trabajando con las mejores prácticas de seguridad y cumpliendo todas las normativas vigentes.</string>
+    <string name="qu_incluye">¿Qué incluye?</string>
+    <string name="diagn_stico_y_cotizaci_n_gratuita">Diagnóstico y cotización gratuita</string>
+    <string name="contratar_agendar">Contratar / Agendar →</string>
+    <string name="editar_perfil">Editar Perfil</string>
+    <string name="juan_rodriguez_email_com">juan.rodriguez@email.com</string>
+    <string name="_57_310_456_7890">+57 310 456 7890</string>
+    <string name="electricista_certificado_con_m_s_de_10_a_os_de_experiencia_en_instalaciones_residenciales_y_comerciales_trabajo_garantizado">Electricista certificado con más de 10 años de experiencia en instalaciones residenciales y comerciales. Trabajo garantizado.</string>
+    <string name="precio_por_hora_usd">Precio por hora (USD)</string>
+    <string name="_50">50</string>
+    <string name="disponibilidad">Disponibilidad</string>
+    <string name="lunes">Lun</string>
+    <string name="martes">Mar</string>
+    <string name="miercoles">Mié</string>
+    <string name="jueves">Jue</string>
+    <string name="viernes">Vie</string>
+    <string name="s_bado">Sáb</string>
+    <string name="domingo">Dom</string>
+    <string name="guardar_cambios">Guardar Cambios</string>
+    <string name="b_squeda">Búsqueda</string>
+    <string name="buscar_por_categor_a_o_nombre">Buscar por categoría o nombre...</string>
 
 
 </resources>

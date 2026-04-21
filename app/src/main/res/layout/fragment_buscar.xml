@@ -89,7 +89,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Filtros rápidos"
+                android:text="@string/filtros_r_pidos"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="@color/Texto1"
@@ -108,7 +108,7 @@
                     android:id="@+id/chipTodos"
                     android:layout_width="wrap_content"
                     android:layout_height="34dp"
-                    android:text="Todos"
+                    android:text="@string/todos"
                     android:textSize="12sp"
                     android:textColor="@color/white"
                     android:gravity="center"
@@ -134,7 +134,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Electricista"
+                        android:text="@string/electricista"
                         android:textSize="12sp"
                         android:textColor="@color/morado_tarjetas"
                         android:layout_marginStart="4dp"/>
@@ -157,7 +157,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Plomero"
+                        android:text="@string/plomero"
                         android:textSize="12sp"
                         android:textColor="@color/morado_tarjetas"
                         android:layout_marginStart="4dp"/>
@@ -190,7 +190,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Carpintero"
+                        android:text="@string/carpintero"
                         android:textSize="12sp"
                         android:textColor="@color/morado_tarjetas"
                         android:layout_marginStart="4dp"/>
@@ -214,7 +214,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pintor"
+                        android:text="@string/pintor"
                         android:textSize="12sp"
                         android:textColor="@color/morado_tarjetas"
                         android:layout_marginStart="4dp"/>
@@ -237,7 +237,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Tech"
+                        android:text="@string/tech"
                         android:textSize="12sp"
                         android:textColor="@color/morado_tarjetas"
                         android:layout_marginStart="4dp"/>
@@ -249,7 +249,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ordenar por"
+                android:text="@string/ordenar_por"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="@color/Texto1"
@@ -269,7 +269,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Mayor calificación"
+                    android:text="@string/mayor_calificaci_n"
                     android:textSize="13sp"
                     android:textColor="@color/Texto1"/>
 
@@ -285,7 +285,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Calificación mínima"
+                android:text="@string/calificaci_n_m_nima"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="@color/Texto1"
@@ -302,7 +302,7 @@
                     android:id="@+id/chipCalTodas"
                     android:layout_width="wrap_content"
                     android:layout_height="34dp"
-                    android:text="Todas"
+                    android:text="@string/todas"
                     android:textSize="12sp"
                     android:textColor="@color/gris"
                     android:gravity="center"
@@ -329,7 +329,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="4+"
+                        android:text="@string/_4"
                         android:textSize="12sp"
                         android:textColor="@color/Texto1"
                         android:layout_marginStart="4dp"/>
@@ -354,7 +354,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="4.5+"
+                        android:text="@string/_4_5"
                         android:textSize="12sp"
                         android:textColor="@color/white"
                         android:layout_marginStart="4dp"/>
@@ -378,7 +378,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="5.0"
+                        android:text="@string/_5_0"
                         android:textSize="12sp"
                         android:textColor="@color/Texto1"
                         android:layout_marginStart="4dp"/>
@@ -391,7 +391,7 @@
                 android:id="@+id/btnBuscar"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
-                android:text="Buscar"
+                android:text="@string/buscar"
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/primary"

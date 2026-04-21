@@ -29,7 +29,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Mis Favoritos"
+            android:text="@string/mis_favoritos"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/Texto1"
@@ -63,7 +63,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Aún no tienes favoritos"
+            android:text="@string/a_n_no_tienes_favoritos"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/Texto1"
@@ -81,7 +81,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Toca el "
+                android:text="@string/toca_el"
                 android:textSize="13sp"
                 android:textColor="@color/gris"
                 android:gravity="center"/>
@@ -95,7 +95,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" en cualquier servicio para guardarlo aquí"
+                android:text="@string/en_cualquier_servicio_para_guardarlo_aqu"
                 android:textSize="13sp"
                 android:textColor="@color/gris"
                 android:gravity="center"/>
@@ -107,7 +107,7 @@
             android:id="@+id/btnExplorar"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
-            android:text="Explorar servicios"
+            android:text="@string/explorar_servicios"
             android:textSize="14sp"
             android:textColor="@color/white"
             android:backgroundTint="@color/primary"

@@ -254,10 +254,6 @@
 
         </LinearLayout>
 
-
-
-
-
         <!-- ===== 6. SOLICITUDES NUEVAS ===== -->
         <LinearLayout
             android:layout_width="match_parent"

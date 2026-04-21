@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:background="#6200EE"
+            android:background="@color/morado"
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:padding="16dp">
@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/registro_cliente"
-                android:textColor="@android:color/white"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:gravity="center"/>
@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/nombre_completo"
                 android:textSize="13sp"
-                android:textColor="#333333"
+                android:textColor="@color/Texto1"
                 android:textStyle="bold"/>
 
             <EditText
@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/correo_electr_nico"
                 android:textSize="13sp"
-                android:textColor="#333333"
+                android:textColor="@color/Texto1"
                 android:textStyle="bold"/>
 
             <EditText
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/tel_fono"
                 android:textSize="13sp"
-                android:textColor="#333333"
+                android:textColor="@color/Texto1"
                 android:textStyle="bold"/>
 
             <EditText
@@ -113,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/ciudad"
                 android:textSize="13sp"
-                android:textColor="#333333"
+                android:textColor="@color/Texto1"
                 android:textStyle="bold"/>
 
             <EditText
@@ -134,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/contrase_a"
                 android:textSize="13sp"
-                android:textColor="#333333"
+                android:textColor="@color/Texto1"
                 android:textStyle="bold"/>
 
             <EditText
@@ -156,8 +156,8 @@
                 android:layout_height="56dp"
                 android:text="@string/crear_cuenta_de_cliente"
                 android:textSize="16sp"
-                android:textColor="@android:color/white"
-                android:backgroundTint="#6200EE"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/morado"
                 android:layout_marginBottom="24dp"/>
 
         </LinearLayout>

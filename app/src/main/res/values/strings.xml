@@ -196,6 +196,19 @@
     <string name="btn_reportes">Reportes</string>
     <string name="btn_configuracion">Configuración</string>
     <string name="btn_ver_usuarios">Ver todos los usuarios →</string>
+    <string name="nombre_servicio">Instalación Eléctrica</string>
+
+    <!-- item servicio -->
+    <string name="prestador_servicio">👤 Juan Rodríguez</string>
+    <string name="precio_servicio">$50/h</string>
+    <string name="estado_activo">Activo</string>
+    <string name="reporte_descripcion">⚠️ Reporte: Descripción no corresponde</string>
+    <string name="calificacion_servicio">⭐ 4.9</string>
+    <string name="resenas_servicio">💬 127 reseñas</string>
+    <string name="reservas_servicio">📅 342 reservas</string>
+    <string name="btn_ver">Ver</string>
+    <string name="btn_pausar">Pausar</string>
+    <string name="btn_eliminar">Eliminar</string>
 
 
 </resources>

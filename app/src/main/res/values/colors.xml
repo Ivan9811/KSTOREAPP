@@ -19,5 +19,6 @@
     <color name="verde_oscuro">#2E7D32</color>
     <color name="rojo_claro">#FFE5E5</color>
     <color name="blanco_suave">#EDE7F6</color>
+    <color name="primary">#7C3AED</color>
 
 </resources>

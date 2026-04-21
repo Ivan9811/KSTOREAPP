@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_cliente"
+    app:startDestination="@id/inicioFragment">
+
+    <!-- Inicio -->
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.ucompensar.kstoreapp.UI.CLIENTE.fragments.InicioFragment"
+        android:label="Inicio">
+        <action
+            android:id="@+id/action_inicio_to_detalle"
+            app:destination="@id/detalleServicioFragment"/>
+    </fragment>
+
+    <!-- Detalle del Servicio -->
+    <fragment
+        android:id="@+id/detalleServicioFragment"
+        android:name="com.ucompensar.kstoreapp.UI.CLIENTE.fragments.DetalleServicioFragment"
+        android:label="Detalle">
+        <action
+            android:id="@+id/action_detalle_to_reservar"
+            app:destination="@id/reservarFragment"/>
+    </fragment>
+
+    <!-- Reservar -->
+    <fragment
+        android:id="@+id/reservarFragment"
+        android:name="com.ucompensar.kstoreapp.UI.CLIENTE.fragments.ReservarFragment"
+        android:label="Reservar">
+        <action
+            android:id="@+id/action_reservar_to_pagar"
+            app:destination="@id/pagarFragment"/>
+    </fragment>
+
+    <!-- Pagar -->
+    <fragment
+        android:id="@+id/pagarFragment"
+        android:name="com.ucompensar.kstoreapp.UI.CLIENTE.fragments.PagarFragment"
+        android:label="Pagar">
+        <action
+            android:id="@+id/action_pagar_to_exitoso"
+            app:destination="@id/pagoExitosoFragment"/>
+    </fragment>
+
+    <!-- Pago Exitoso -->
+    <fragment
+        android:id="@+id/pagoExitosoFragment"
+        android:name="com.ucompensar.kstoreapp.UI.CLIENTE.fragments.PagoExitosoFragment"
+        android:label="Pago Exitoso"/>
+
+</navigation>

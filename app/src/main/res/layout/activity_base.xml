@@ -5,21 +5,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- Contenedor de Fragments -->
     <FrameLayout
         android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
 
-    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         app:itemIconTint="@null"
-        app:itemTextColor="@null"
-        app:menu="@menu/menu_admin"/>
+        app:itemTextColor="@null"/>
 
 </LinearLayout>

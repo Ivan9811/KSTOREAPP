@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Contenido scrolleable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="72dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ===== HEADER MORADO ===== -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#6B2FCC">
+
+                <!-- Botón volver -->
+                <ImageView
+                    android:id="@+id/btnVolver"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/arrow_back"
+                    android:padding="6dp"
+                    android:background="@drawable/bg_circle_gray"
+                    android:layout_margin="16dp"
+                    android:layout_gravity="top|start"/>
+
+                <!-- Favorito -->
+                <ImageView
+                    android:id="@+id/btnFavorito"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/favorito"
+                    android:padding="6dp"
+                    android:background="@drawable/bg_circle_gray"
+                    android:layout_margin="16dp"
+                    android:layout_gravity="top|end"/>
+
+                <!-- Ícono central -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚡"
+                    android:textSize="64sp"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+            <!-- ===== CONTENIDO ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Profesional -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:text="JR"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_avatar_purple"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Juan Rodríguez"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:textColor="#1A1A1A"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⭐⭐⭐⭐⭐ 4.9 (127 reseñas)"
+                            android:textSize="12sp"
+                            android:textColor="#FF9500"/>
+                    </LinearLayout>
+
+                    <!-- Badge Verificado -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="✓ Verificado"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:background="@drawable/bg_chip_selected"/>
+
+                </LinearLayout>
+
+                <!-- Título -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Instalación Eléctrica Residencial"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A1A"
+                    android:layout_marginTop="12dp"/>
+
+                <!-- Precio -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$50/hora"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#4A0E8F"
+                    android:layout_marginTop="4dp"/>
+
+                <!-- Tags -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📍 Bogotá"
+                        android:textSize="11sp"
+                        android:textColor="#4A0E8F"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/bg_chip_unselected"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⚡ Electricista"
+                        android:textSize="11sp"
+                        android:textColor="#4A0E8F"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/bg_chip_unselected"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🕐 Disponible hoy"
+                        android:textSize="11sp"
+                        android:textColor="#4A0E8F"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:background="@drawable/bg_chip_unselected"/>
+
+                </LinearLayout>
+
+                <!-- Descripción -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Descripción del Servicio"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A1A"
+                    android:layout_marginTop="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Electricista certificado con más de 10 años de experiencia en instalaciones eléctricas residenciales y comerciales. Ofrezco servicios de calidad garantizados, trabajando con las mejores prácticas de seguridad y cumpliendo todas las normativas vigentes."
+                    android:textSize="13sp"
+                    android:textColor="#555555"
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginTop="6dp"/>
+
+                <!-- ¿Qué incluye? -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¿Qué incluye?"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A1A"
+                    android:layout_marginTop="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔍"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Diagnóstico y cotización gratuita"
+                        android:textSize="13sp"
+                        android:textColor="#333333"
+                        android:layout_marginStart="8dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ===== BARRA INFERIOR FIJA ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="10dp"
+        android:gravity="center_vertical"
+        android:elevation="8dp"
+        app:layout_anchor="@android:id/content"
+        app:layout_anchorGravity="bottom">
+
+        <!-- Botón Chat -->
+        <ImageView
+            android:id="@+id/btnChat"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/mensajes"
+            android:padding="8dp"
+            android:background="@drawable/bg_chip_unselected"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Botón Calendario -->
+        <ImageView
+            android:id="@+id/btnCalendario"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/calendar"
+            android:padding="8dp"
+            android:background="@drawable/bg_chip_orange"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Botón Contratar -->
+        <Button
+            android:id="@+id/btnContratar"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:text="Contratar / Agendar →"
+            android:textSize="13sp"
+            android:backgroundTint="#4A0E8F"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

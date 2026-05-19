@@ -14,16 +14,9 @@
         android:gravity="center_vertical"
         android:paddingHorizontal="16dp"
         android:background="@color/white"
-        android:layout_marginTop="25dp"
-        >
+        android:layout_marginTop="25dp">
 
-        <ImageView
-            android:id="@+id/btnVolver"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:src="@drawable/arrow_back"
-            android:padding="6dp"
-            app:tint="@color/Texto1"/>
+        <View android:layout_width="36dp" android:layout_height="36dp"/>
 
         <TextView
             android:layout_width="0dp"
@@ -36,22 +29,33 @@
             android:gravity="center"
             android:paddingTop="10dp"/>
 
-        <View
-            android:layout_width="36dp"
-            android:layout_height="36dp"/>
+        <View android:layout_width="36dp" android:layout_height="36dp"/>
 
     </LinearLayout>
 
-    <!-- ===== CONTENIDO VACÍO CENTRADO ===== -->
+    <!-- ===== LISTA DE FAVORITOS ===== -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFavoritos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp"
+        android:clipToPadding="false"
+        android:scrollbars="none"/>
+
+    <!-- ===== EMPTY STATE ===== -->
     <LinearLayout
+        android:id="@+id/layoutVacio"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="vertical"
         android:gravity="center"
-        android:paddingHorizontal="32dp">
+        android:paddingHorizontal="32dp"
+        android:visibility="gone">
 
-        <!-- Ícono corazón -->
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
@@ -59,7 +63,6 @@
             app:tint="#FF3B30"
             android:layout_marginBottom="24dp"/>
 
-        <!-- Título -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -70,39 +73,15 @@
             android:gravity="center"
             android:layout_marginBottom="12dp"/>
 
-        <!-- Subtítulo -->
-        <LinearLayout
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:text="Guarda tus servicios favoritos para encontrarlos más rápido"
+            android:textSize="13sp"
+            android:textColor="@color/gris"
             android:gravity="center"
-            android:layout_marginBottom="32dp">
+            android:layout_marginBottom="32dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/toca_el"
-                android:textSize="13sp"
-                android:textColor="@color/gris"
-                android:gravity="center"/>
-
-            <ImageView
-                android:layout_width="14dp"
-                android:layout_height="14dp"
-                android:src="@drawable/favorito"
-                app:tint="#FF3B30"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/en_cualquier_servicio_para_guardarlo_aqu"
-                android:textSize="13sp"
-                android:textColor="@color/gris"
-                android:gravity="center"/>
-
-        </LinearLayout>
-
-        <!-- Botón -->
         <Button
             android:id="@+id/btnExplorar"
             android:layout_width="wrap_content"

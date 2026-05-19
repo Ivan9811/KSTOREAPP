@@ -16,13 +16,7 @@
         android:background="@color/white"
         android:layout_marginTop="25dp">
 
-        <ImageView
-            android:id="@+id/btnVolver"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:src="@drawable/arrow_back"
-            android:padding="6dp"
-            app:tint="@color/Texto1"/>
+        <View android:layout_width="36dp" android:layout_height="36dp"/>
 
         <TextView
             android:layout_width="0dp"
@@ -34,9 +28,7 @@
             android:textColor="@color/Texto1"
             android:gravity="center"/>
 
-        <View
-            android:layout_width="36dp"
-            android:layout_height="36dp"/>
+        <View android:layout_width="36dp" android:layout_height="36dp"/>
 
     </LinearLayout>
 
@@ -81,11 +73,12 @@
                     android:layout_marginStart="8dp"
                     android:inputType="text"
                     android:imeOptions="actionSearch"
-                    android:singleLine="true"/>
+                    android:singleLine="true"
+                    android:importantForAutofill="no"/>
 
             </LinearLayout>
 
-            <!-- ===== FILTROS RÁPIDOS ===== -->
+            <!-- ===== FILTROS ===== -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -96,14 +89,12 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"/>
 
-            <!-- Fila 1 de chips -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginBottom="8dp">
 
-                <!-- Todos (seleccionado) -->
                 <TextView
                     android:id="@+id/chipTodos"
                     android:layout_width="wrap_content"
@@ -116,168 +107,59 @@
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/bg_chip_selected"/>
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/chipElectricista"
                     android:layout_width="wrap_content"
                     android:layout_height="34dp"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="12dp"
+                    android:text="@string/electricista"
+                    android:textSize="12sp"
+                    android:textColor="@color/morado_tarjetas"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
                     android:layout_marginEnd="8dp"
-                    android:background="@drawable/bg_chip_unselected">
+                    android:background="@drawable/bg_chip_unselected"/>
 
-                    <ImageView
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
-                        android:src="@drawable/bolt"
-                        app:tint="@color/morado_tarjetas"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/electricista"
-                        android:textSize="12sp"
-                        android:textColor="@color/morado_tarjetas"
-                        android:layout_marginStart="4dp"/>
-                </LinearLayout>
-
-                <LinearLayout
+                <TextView
+                    android:id="@+id/chipPlomero"
                     android:layout_width="wrap_content"
                     android:layout_height="34dp"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="12dp"
-                    android:background="@drawable/bg_chip_unselected">
-
-                    <ImageView
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
-                        android:src="@drawable/plumbing"
-                        app:tint="@color/morado_tarjetas"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/plomero"
-                        android:textSize="12sp"
-                        android:textColor="@color/morado_tarjetas"
-                        android:layout_marginStart="4dp"/>
-                </LinearLayout>
+                    android:text="@string/plomero"
+                    android:textSize="12sp"
+                    android:textColor="@color/morado_tarjetas"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/bg_chip_unselected"/>
 
             </LinearLayout>
 
-            <!-- Fila 2 de chips -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginBottom="8dp">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/chipCarpintero"
                     android:layout_width="wrap_content"
                     android:layout_height="34dp"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="12dp"
+                    android:text="@string/carpintero"
+                    android:textSize="12sp"
+                    android:textColor="@color/morado_tarjetas"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
                     android:layout_marginEnd="8dp"
-                    android:background="@drawable/bg_chip_unselected">
-
-                    <ImageView
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
-                        android:src="@drawable/handyman"
-                        app:tint="@color/morado_tarjetas"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/carpintero"
-                        android:textSize="12sp"
-                        android:textColor="@color/morado_tarjetas"
-                        android:layout_marginStart="4dp"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="34dp"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="12dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/bg_chip_unselected">
-
-                    <ImageView
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
-                        android:src="@drawable/paint"
-                        app:tint="@color/morado_tarjetas"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/pintor"
-                        android:textSize="12sp"
-                        android:textColor="@color/morado_tarjetas"
-                        android:layout_marginStart="4dp"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="34dp"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="12dp"
-                    android:background="@drawable/bg_chip_unselected">
-
-                    <ImageView
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
-                        android:src="@drawable/computer"
-                        app:tint="@color/morado_tarjetas"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/tech"
-                        android:textSize="12sp"
-                        android:textColor="@color/morado_tarjetas"
-                        android:layout_marginStart="4dp"/>
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!-- ===== ORDENAR POR ===== -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ordenar_por"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:textColor="@color/Texto1"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="10dp"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:paddingHorizontal="12dp"
-                android:background="@drawable/bg_input_outline">
+                    android:background="@drawable/bg_chip_unselected"/>
 
                 <TextView
-                    android:id="@+id/tvOrdenar"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/mayor_calificaci_n"
-                    android:textSize="13sp"
-                    android:textColor="@color/Texto1"/>
-
-                <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:src="@drawable/expand"
-                    app:tint="@color/gris"/>
+                    android:id="@+id/chipPintor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:text="@string/pintor"
+                    android:textSize="12sp"
+                    android:textColor="@color/morado_tarjetas"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/bg_chip_unselected"/>
 
             </LinearLayout>
 
@@ -295,94 +177,55 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
 
-                <!-- Todas -->
                 <TextView
                     android:id="@+id/chipCalTodas"
                     android:layout_width="wrap_content"
                     android:layout_height="34dp"
                     android:text="@string/todas"
                     android:textSize="12sp"
-                    android:textColor="@color/gris"
+                    android:textColor="@color/white"
                     android:gravity="center"
                     android:paddingHorizontal="14dp"
                     android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_chip_selected"/>
+
+                <TextView
+                    android:id="@+id/chipCal4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:text="⭐ 4+"
+                    android:textSize="12sp"
+                    android:textColor="@color/morado_tarjetas"
+                    android:gravity="center"
+                    android:paddingHorizontal="12dp"
+                    android:layout_marginEnd="8dp"
                     android:background="@drawable/bg_chip_unselected"/>
 
-                <!-- 4+ -->
-                <LinearLayout
+                <TextView
+                    android:id="@+id/chipCal45"
                     android:layout_width="wrap_content"
                     android:layout_height="34dp"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
+                    android:text="⭐ 4.5+"
+                    android:textSize="12sp"
+                    android:textColor="@color/morado_tarjetas"
+                    android:gravity="center"
                     android:paddingHorizontal="12dp"
                     android:layout_marginEnd="8dp"
-                    android:background="@drawable/bg_chip_unselected">
+                    android:background="@drawable/bg_chip_unselected"/>
 
-                    <ImageView
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
-                        android:src="@drawable/star"
-                        app:tint="@color/dorado"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/_4"
-                        android:textSize="12sp"
-                        android:textColor="@color/Texto1"
-                        android:layout_marginStart="4dp"/>
-                </LinearLayout>
-
-                <!-- 4.5+ (seleccionado) -->
-                <LinearLayout
+                <TextView
+                    android:id="@+id/chipCal5"
                     android:layout_width="wrap_content"
                     android:layout_height="34dp"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
+                    android:text="⭐ 5.0"
+                    android:textSize="12sp"
+                    android:textColor="@color/morado_tarjetas"
+                    android:gravity="center"
                     android:paddingHorizontal="12dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/bg_chip_selected">
-
-                    <ImageView
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
-                        android:src="@drawable/star"
-                        app:tint="@color/white"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/_4_5"
-                        android:textSize="12sp"
-                        android:textColor="@color/white"
-                        android:layout_marginStart="4dp"/>
-                </LinearLayout>
-
-                <!-- 5.0 -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="34dp"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="12dp"
-                    android:background="@drawable/bg_chip_unselected">
-
-                    <ImageView
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
-                        android:src="@drawable/star"
-                        app:tint="@color/dorado"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/_5_0"
-                        android:textSize="12sp"
-                        android:textColor="@color/Texto1"
-                        android:layout_marginStart="4dp"/>
-                </LinearLayout>
+                    android:background="@drawable/bg_chip_unselected"/>
 
             </LinearLayout>
 
@@ -395,11 +238,29 @@
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/primary"
-                android:layout_marginTop="32dp"
-                android:layout_marginBottom="24dp"
+                android:layout_marginBottom="16dp"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
                 style="@style/Widget.MaterialComponents.Button"/>
+
+            <!-- ===== RESULTADOS ===== -->
+            <TextView
+                android:id="@+id/tvSinResultados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Sin resultados para tu búsqueda"
+                android:textSize="14sp"
+                android:textColor="@color/gris"
+                android:gravity="center"
+                android:layout_marginTop="32dp"
+                android:visibility="gone"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvResultados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
 
         </LinearLayout>
     </ScrollView>

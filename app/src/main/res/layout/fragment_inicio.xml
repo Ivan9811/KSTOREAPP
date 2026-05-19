@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:fitsSystemWindows="true"
     android:padding="10dp">
 
     <LinearLayout
@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- ===== 1. HEADER ===== -->
+        <!-- ===== HEADER ===== -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
                         android:layout_width="12dp"
                         android:layout_height="12dp"
                         android:src="@drawable/location"
-                        app:tint="#FF0000" />
+                        app:tint="@color/rojo_fuego" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -49,11 +49,12 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/tvNombreUsuario"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/app_name"
-                    android:textColor="#1A1A1A"
-                    android:textSize="22sp"
+                    android:textColor="@color/_1a1a1a"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -81,7 +82,7 @@
             </FrameLayout>
         </LinearLayout>
 
-        <!-- ===== 2. BUSCADOR ===== -->
+        <!-- ===== BUSCADOR ===== -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -95,70 +96,18 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@drawable/search"
-                app:tint="#AAAAAA" />
+                app:tint="@color/gris_suave" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="@string/buscar_servicios_o_profesionales"
-                android:textColor="#AAAAAA"
+                android:textColor="@color/gris_suave"
                 android:textSize="14sp" />
         </LinearLayout>
 
-        <!-- ===== 3. FILTROS ===== -->
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="16dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="4dp"
-            android:scrollbars="none">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:background="@drawable/bg_chip_selected"
-                    android:gravity="center"
-                    android:paddingHorizontal="16dp"
-                    android:text="@string/todos"
-                    android:textColor="@color/white" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:background="@drawable/bg_chip_unselected"
-                    android:gravity="center"
-                    android:paddingHorizontal="16dp"
-                    android:text="@string/electricista"
-                    android:textColor="#4A0E8F" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:background="@drawable/bg_chip_unselected"
-                    android:gravity="center"
-                    android:paddingHorizontal="16dp"
-                    android:text="@string/plomero"
-                    android:textColor="#4A0E8F" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:background="@drawable/bg_chip_unselected"
-                    android:gravity="center"
-                    android:paddingHorizontal="16dp"
-                    android:text="@string/pintor"
-                    android:textColor="#4A0E8F" />
-            </LinearLayout>
-        </HorizontalScrollView>
-
-        <!-- ===== 4. BANNER ===== -->
+        <!-- ===== BANNER ===== -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="140dp"
@@ -181,20 +130,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="@string/m_s_de_5_000_profesionales_verificados_listos_para_ayudarte_hoy"
-                android:textColor="#E0D0FF"
+                android:textColor="@color/celeste"
                 android:textSize="12sp" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="#FF9500"
-                android:text="@string/explorar_servicios"
-                android:textColor="@color/white"
-                android:textSize="13sp" />
         </LinearLayout>
 
-        <!-- ===== 5. CATEGORÍAS ===== -->
+        <!-- ===== CATEGORÍAS ===== -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -202,7 +142,7 @@
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="@string/categor_as_populares"
-            android:textColor="#1A1A1A"
+            android:textColor="@color/_1a1a1a"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -213,130 +153,59 @@
             android:paddingHorizontal="8dp"
             android:weightSum="5">
 
-            <!-- Categoria item x5 -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/bg_category_circle"
-                    android:gravity="center"
-                    android:text="@string/icon_bolt"
-                    android:textSize="24sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:gravity="center"
-                    android:text="@string/electricista"
-                    android:textSize="10sp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                <TextView android:layout_width="48dp" android:layout_height="48dp"
+                    android:background="@drawable/bg_category_circle" android:gravity="center"
+                    android:text="@string/icon_bolt" android:textSize="24sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:gravity="center"
+                    android:text="@string/electricista" android:textSize="10sp" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/bg_category_circle"
-                    android:gravity="center"
-                    android:text="🚿"
-                    android:textSize="24sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:gravity="center"
-                    android:text="Plomero"
-                    android:textSize="10sp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                <TextView android:layout_width="48dp" android:layout_height="48dp"
+                    android:background="@drawable/bg_category_circle" android:gravity="center"
+                    android:text="@string/ducha" android:textSize="24sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:gravity="center"
+                    android:text="@string/plomero" android:textSize="10sp" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/bg_category_circle"
-                    android:gravity="center"
-                    android:text="🔨"
-                    android:textSize="24sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:gravity="center"
-                    android:text="@string/carpintero"
-                    android:textSize="10sp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                <TextView android:layout_width="48dp" android:layout_height="48dp"
+                    android:background="@drawable/bg_category_circle" android:gravity="center"
+                    android:text="@string/icon_martillo" android:textSize="24sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:gravity="center"
+                    android:text="@string/carpintero" android:textSize="10sp" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/bg_category_circle"
-                    android:gravity="center"
-                    android:text="@string/icon_palet"
-                    android:textSize="24sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:gravity="center"
-                    android:text="@string/pintor"
-                    android:textSize="10sp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                <TextView android:layout_width="48dp" android:layout_height="48dp"
+                    android:background="@drawable/bg_category_circle" android:gravity="center"
+                    android:text="@string/icon_palet" android:textSize="24sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:gravity="center"
+                    android:text="@string/pintor" android:textSize="10sp" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/bg_category_circle"
-                    android:gravity="center"
-                    android:text="@string/icon_computer"
-                    android:textSize="24sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:gravity="center"
-                    android:text="@string/tech"
-                    android:textSize="10sp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                <TextView android:layout_width="48dp" android:layout_height="48dp"
+                    android:background="@drawable/bg_category_circle" android:gravity="center"
+                    android:text="@string/icon_computer" android:textSize="24sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:gravity="center"
+                    android:text="@string/tech" android:textSize="10sp" />
             </LinearLayout>
 
         </LinearLayout>
 
-        <!-- ===== 6. SERVICIOS DESTACADOS ===== -->
+        <!-- ===== TITULO SERVICIOS DESTACADOS ===== -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -351,7 +220,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/servicios_destacados"
-                android:textColor="#1A1A1A"
+                android:textColor="@color/_1a1a1a"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -359,16 +228,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ver_todos"
-                android:textColor="#4A0E8F"
+                android:textColor="@color/morado_tarjetas"
                 android:textSize="13sp" />
         </LinearLayout>
 
-        <!-- Tarjeta de servicio -->
+        <!-- ===== TARJETA PRINCIPAL (servicio 1) ===== -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             app:cardCornerRadius="16dp"
             app:cardElevation="4dp">
 
@@ -378,13 +248,19 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- Imagen del servicio -->
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
-                    android:background="#6B2FCC">
+                    android:background="@color/Morado_suave">
+
+                    <ImageView
+                        android:id="@+id/ivFotoServicio"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"/>
 
                     <TextView
+                        android:id="@+id/tvCategoriaServicio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="top|end"
@@ -397,7 +273,6 @@
                         android:textSize="12sp" />
                 </FrameLayout>
 
-                <!-- Info del profesional -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -410,8 +285,8 @@
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
 
-                        <!-- Avatar -->
                         <TextView
+                            android:id="@+id/tvInicialesProfesional"
                             android:layout_width="36dp"
                             android:layout_height="36dp"
                             android:background="@drawable/bg_avatar_purple"
@@ -427,41 +302,152 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tvNombreProfesional"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/juan_rodr_guez"
-                                android:textColor="#1A1A1A"
+                                android:textColor="@color/_1a1a1a"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
 
                             <TextView
+                                android:id="@+id/tvCalificacionServicio"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/calificacion"
-                                android:textColor="#FF9500"
+                                android:textColor="@color/dorado_suave"
                                 android:textSize="12sp" />
                         </LinearLayout>
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/tvTituloServicio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="@string/instalaci_n_el_ctrica_residencial"
-                        android:textColor="#4A0E8F"
+                        android:textColor="@color/primary"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tvDescripcionServicio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="@string/electricista_certificado_con_10_a_os_de_experiencia_especializado_en_instalaciones_residenciales_y_comerciales"
-                        android:textColor="#666666"
-                        android:textSize="12sp" />
+                        android:textColor="@color/gris_raton"
+                        android:textSize="12sp"
+                        android:maxLines="2"
+                        android:ellipsize="end"/>
+
+                    <TextView
+                        android:id="@+id/tvPrecioServicio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/morado_tarjetas"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+        <!-- ===== TARJETA PEQUEÑA (servicio 2) ===== -->
+        <LinearLayout
+            android:id="@+id/cardServicio2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:padding="12dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivFotoServicio2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:background="@color/Morado_suave"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:id="@+id/tvTituloServicio2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/_1a1a1a"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+
+                <TextView
+                    android:id="@+id/tvPrecioServicio2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/morado_tarjetas"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== TARJETA PEQUEÑA (servicio 3) ===== -->
+        <LinearLayout
+            android:id="@+id/cardServicio3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:padding="12dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivFotoServicio3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:background="@color/Morado_suave"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:id="@+id/tvTituloServicio3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/_1a1a1a"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+
+                <TextView
+                    android:id="@+id/tvPrecioServicio3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/morado_tarjetas"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

@@ -24,5 +24,12 @@
     <color name="burble_background_gray">#F0F0F0</color>
     <color name="titulos_color">#1E1B4B</color>
     <color name="_1a1a1a">#1A1A1A</color>
+    <color name="Morado_suave">#6B2FCC</color>
+    <color name="dorado_suave">#FF9500</color>
+    <color name="gris_raton">#666666</color>
+    <color name="celeste">#E0D0FF</color>
+    <color name="gris_suave">#AAAAAA</color>
+    <color name="rojo_fuego">#FF0000</color>
+    <color name="fuego">#FF3B30</color>
 
 </resources>

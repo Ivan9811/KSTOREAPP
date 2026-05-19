@@ -1,44 +1,113 @@
 package com.ucompensar.kstoreapp.UI.CLIENTE.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ucompensar.kstoreapp.R
 import com.ucompensar.kstoreapp.UI.CLIENTE.MensajesAdapter
+import com.ucompensar.kstoreapp.UI.ChatActivity
+import com.ucompensar.kstoreapp.process.SupabaseClient
+import io.github.jan.supabase.auth.auth
+import io.github.jan.supabase.postgrest.postgrest
+import kotlinx.coroutines.launch
+import kotlinx.serialization.json.jsonPrimitive
 
 class MensajesFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_mensajes, container, false)
-    }
+    ): View? = inflater.inflate(R.layout.fragment_mensajes, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        cargarConversaciones(view)
+    }
 
-        // Datos de prueba
-        val mensajes = listOf(
-            MensajeItem("CL", "Carlos López",  "¿Estás disponible el viernes?",    "5 min", online = true,  noLeidos = 2),
-            MensajeItem("MG", "Miguel Gómez",  "El trabajo quedó perfecto, gracias!", "1h",  online = false, noLeidos = 0),
-            MensajeItem("AS", "Ana Silva",     "Te enviamos la cotización",          "3h",   online = true,  noLeidos = 1),
-            MensajeItem("PV", "Pedro Vargas",  "Confirmó para el lunes a las 9am",  "Ayer",  online = false, noLeidos = 0)
-        )
+    override fun onResume() {
+        super.onResume()
+        view?.let { cargarConversaciones(it) }
+    }
 
-        val recycler = view.findViewById<RecyclerView>(R.id.rvMensajes)
-        recycler.layoutManager = LinearLayoutManager(requireContext())
-        recycler.addItemDecoration(
-            DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)
-        )
-        recycler.adapter = MensajesAdapter(mensajes) { item ->
-            Toast.makeText(requireContext(), "Chat con ${item.nombre}", Toast.LENGTH_SHORT).show()
+    private fun cargarConversaciones(view: View) {
+        viewLifecycleOwner.lifecycleScope.launch {
+            try {
+                val uid = SupabaseClient.client.auth.currentSessionOrNull()?.user?.id
+                    ?: return@launch
+
+                // ✅ Filtrar solo conversaciones donde el usuario es cliente
+                val conversaciones = SupabaseClient.client.postgrest
+                    .from("conversaciones")
+                    .select { filter { eq("cliente_id", uid) } }
+                    .decodeList<Map<String, kotlinx.serialization.json.JsonElement>>()
+
+                val items = conversaciones.mapNotNull { conv ->
+                    val otroId = conv["profesional_id"]?.jsonPrimitive?.content
+                        ?: return@mapNotNull null
+
+                    val otroProfile = try {
+                        SupabaseClient.client.postgrest
+                            .from("profiles")
+                            .select { filter { eq("id", otroId) } }
+                            .decodeSingle<Map<String, kotlinx.serialization.json.JsonElement>>()
+                    } catch (e: Exception) { null } ?: return@mapNotNull null
+
+                    val nombre    = otroProfile["nombre"]?.jsonPrimitive?.content ?: "Usuario"
+                    val iniciales = nombre.split(" ")
+                        .take(2).mapNotNull { it.firstOrNull()?.uppercaseChar() }
+                        .joinToString("")
+
+                    MensajeItem(
+                        iniciales      = iniciales,
+                        nombre         = nombre,
+                        ultimoMensaje  = conv["ultimo_mensaje"]?.jsonPrimitive?.content ?: "",
+                        hora           = formatearTiempo(conv["ultimo_mensaje_at"]?.jsonPrimitive?.content ?: ""),
+                        online         = false,
+                        noLeidos       = 0,
+                        conversacionId = conv["id"]?.jsonPrimitive?.content ?: "",
+                        otroId         = otroId
+                    )
+                }
+
+                val recycler = view.findViewById<RecyclerView>(R.id.rvMensajes)
+                recycler.layoutManager = LinearLayoutManager(requireContext())
+                recycler.addItemDecoration(
+                    DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)
+                )
+                recycler.adapter = MensajesAdapter(items) { item ->
+                    startActivity(
+                        Intent(requireContext(), ChatActivity::class.java).apply {
+                            putExtra("conversacion_id", item.conversacionId)
+                            putExtra("otro_nombre",     item.nombre)
+                            putExtra("otro_id",         item.otroId)
+                        }
+                    )
+                }
+
+            } catch (e: Exception) {
+                android.util.Log.e("MENSAJES", "Error: ${e.message}", e)
+            }
         }
+    }
+
+    private fun formatearTiempo(fecha: String): String {
+        if (fecha.isEmpty()) return ""
+        return try {
+            val instant = java.time.Instant.parse(fecha)
+            val now     = java.time.Instant.now()
+            val diff    = java.time.Duration.between(instant, now)
+            when {
+                diff.toMinutes() < 60 -> "${diff.toMinutes()} min"
+                diff.toHours()   < 24 -> "${diff.toHours()}h"
+                else                  -> "Ayer"
+            }
+        } catch (e: Exception) { "" }
     }
 }

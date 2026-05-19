@@ -5,15 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:importantForAutofill="no"
     tools:context=".UI.PROFESIONAL.fragments.publicacionProfesional">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="20dp"
+        android:importantForAutofill="no">
 
-        <!-- Header: Botón Atrás y Título -->
+        <!-- Header -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,7 +41,7 @@
                 android:textStyle="bold" />
         </RelativeLayout>
 
-        <!-- Campo: Título del Servicio -->
+        <!-- Título -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -49,34 +51,40 @@
             android:layout_marginBottom="8dp"/>
 
         <EditText
+            android:id="@+id/etTitulo"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:background="@drawable/input"
             android:hint="@string/ej_instalaci_n_el_ctrica_residencial"
             android:paddingHorizontal="16dp"
             android:textSize="14sp"
+            android:inputType="textCapSentences"
+            android:importantForAutofill="no"
+            android:autofillHints=""
             android:layout_marginBottom="20dp"/>
 
-        <!-- Campo: Categoría -->
+        <!-- Categoría -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Categoría"
+            android:text="@string/categor_a"
             android:textColor="@color/titulos_color"
             android:textStyle="bold"
             android:layout_marginBottom="8dp"/>
 
         <TextView
+            android:id="@+id/tvCategoria"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:background="@drawable/input"
             android:gravity="center_vertical"
             android:paddingHorizontal="16dp"
             android:text="@string/selecciona_una_categor_a"
-            android:textColor="#888888"
+            android:textColor="@color/blanco_filtro"
+            android:importantForAutofill="no"
             android:layout_marginBottom="20dp"/>
 
-        <!-- Campo: Descripción -->
+        <!-- Descripción -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -86,6 +94,7 @@
             android:layout_marginBottom="8dp"/>
 
         <EditText
+            android:id="@+id/etDescripcion"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:background="@drawable/input"
@@ -93,9 +102,12 @@
             android:hint="@string/describe_tu_servicio_en_detalle"
             android:padding="16dp"
             android:textSize="14sp"
+            android:inputType="textMultiLine"
+            android:importantForAutofill="no"
+            android:autofillHints=""
             android:layout_marginBottom="20dp"/>
 
-        <!-- Campo: Precio -->
+        <!-- Precio -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -108,16 +120,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:importantForAutofill="no"
             android:layout_marginBottom="20dp">
 
             <EditText
+                android:id="@+id/etPrecio"
                 android:layout_width="0dp"
                 android:layout_height="55dp"
                 android:layout_weight="1"
                 android:background="@drawable/input"
                 android:hint="@string/_50"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:paddingHorizontal="16dp"
+                android:importantForAutofill="no"
+                android:autofillHints=""
                 android:layout_marginEnd="8dp"/>
 
             <TextView
@@ -128,10 +144,58 @@
                 android:gravity="center_vertical"
                 android:paddingHorizontal="16dp"
                 android:text="@string/por_hora"
+                android:importantForAutofill="no"
                 android:textColor="@color/_1a1a1a" />
         </LinearLayout>
 
-        <!-- Campo: Disponibilidad -->
+        <!-- ✅ SECCIÓN UBICACIÓN (nueva) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubicación del servicio"
+            android:textColor="@color/titulos_color"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Botón detectar GPS -->
+        <Button
+            android:id="@+id/btnDetectarUbicacion"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="📍 Detectar mi ubicación"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/morado_tarjetas"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:layout_marginBottom="8dp"
+            style="@style/Widget.MaterialComponents.Button"/>
+
+        <!-- Dirección manual (se llena solo con GPS o el usuario puede editar) -->
+        <EditText
+            android:id="@+id/etDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/input"
+            android:hint="O escribe tu dirección manualmente"
+            android:paddingHorizontal="16dp"
+            android:textSize="14sp"
+            android:inputType="textPostalAddress"
+            android:importantForAutofill="no"
+            android:autofillHints=""
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Texto que muestra la dirección detectada -->
+        <TextView
+            android:id="@+id/tvUbicacionDetectada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/morado_tarjetas"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"/>
+
+        <!-- Disponibilidad -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -145,101 +209,53 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="7"
+            android:importantForAutofill="no"
             android:layout_marginBottom="32dp">
 
-            <!-- Lun (seleccionado) -->
-            <TextView
-                android:id="@+id/diaLun"
-                android:layout_width="0dp"
-                android:layout_height="36dp"
-                android:layout_weight="1"
-                android:text="@string/lunes"
-                android:textSize="11sp"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:layout_marginEnd="4dp"
-                android:background="@drawable/bg_chip_selected"/>
+            <TextView android:id="@+id/diaLun"
+                android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1"
+                android:text="@string/lunes" android:textSize="11sp"
+                android:textColor="@color/morado_tarjetas" android:gravity="center"
+                android:layout_marginEnd="4dp" android:background="@drawable/bg_chip_unselected"/>
 
-            <!-- Mar (seleccionado) -->
-            <TextView
-                android:id="@+id/diaMar"
-                android:layout_width="0dp"
-                android:layout_height="36dp"
-                android:layout_weight="1"
-                android:text="@string/martes"
-                android:textSize="11sp"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:layout_marginEnd="4dp"
-                android:background="@drawable/bg_chip_selected"/>
+            <TextView android:id="@+id/diaMar"
+                android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1"
+                android:text="@string/martes" android:textSize="11sp"
+                android:textColor="@color/morado_tarjetas" android:gravity="center"
+                android:layout_marginEnd="4dp" android:background="@drawable/bg_chip_unselected"/>
 
-            <!-- Mié (seleccionado) -->
-            <TextView
-                android:id="@+id/diaMie"
-                android:layout_width="0dp"
-                android:layout_height="36dp"
-                android:layout_weight="1"
-                android:text="@string/miercoles"
-                android:textSize="11sp"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:layout_marginEnd="4dp"
-                android:background="@drawable/bg_chip_selected"/>
+            <TextView android:id="@+id/diaMie"
+                android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1"
+                android:text="@string/miercoles" android:textSize="11sp"
+                android:textColor="@color/morado_tarjetas" android:gravity="center"
+                android:layout_marginEnd="4dp" android:background="@drawable/bg_chip_unselected"/>
 
-            <!-- Jue (seleccionado) -->
-            <TextView
-                android:id="@+id/diaJue"
-                android:layout_width="0dp"
-                android:layout_height="36dp"
-                android:layout_weight="1"
-                android:text="@string/jueves"
-                android:textSize="11sp"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:layout_marginEnd="4dp"
-                android:background="@drawable/bg_chip_selected"/>
+            <TextView android:id="@+id/diaJue"
+                android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1"
+                android:text="@string/jueves" android:textSize="11sp"
+                android:textColor="@color/morado_tarjetas" android:gravity="center"
+                android:layout_marginEnd="4dp" android:background="@drawable/bg_chip_unselected"/>
 
-            <!-- Vie (seleccionado) -->
-            <TextView
-                android:id="@+id/diaVie"
-                android:layout_width="0dp"
-                android:layout_height="36dp"
-                android:layout_weight="1"
-                android:text="@string/viernes"
-                android:textSize="11sp"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:layout_marginEnd="4dp"
-                android:background="@drawable/bg_chip_selected"/>
+            <TextView android:id="@+id/diaVie"
+                android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1"
+                android:text="@string/viernes" android:textSize="11sp"
+                android:textColor="@color/morado_tarjetas" android:gravity="center"
+                android:layout_marginEnd="4dp" android:background="@drawable/bg_chip_unselected"/>
 
-            <!-- Sáb (no seleccionado) -->
-            <TextView
-                android:id="@+id/diaSab"
-                android:layout_width="0dp"
-                android:layout_height="36dp"
-                android:layout_weight="1"
-                android:text="@string/s_bado"
-                android:textSize="11sp"
-                android:textColor="@color/morado_tarjetas"
-                android:gravity="center"
-                android:layout_marginEnd="4dp"
+            <TextView android:id="@+id/diaSab"
+                android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1"
+                android:text="@string/s_bado" android:textSize="11sp"
+                android:textColor="@color/morado_tarjetas" android:gravity="center"
+                android:layout_marginEnd="4dp" android:background="@drawable/bg_chip_unselected"/>
+
+            <TextView android:id="@+id/diaDom"
+                android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1"
+                android:text="@string/domingo" android:textSize="11sp"
+                android:textColor="@color/morado_tarjetas" android:gravity="center"
                 android:background="@drawable/bg_chip_unselected"/>
-
-            <!-- Dom (no seleccionado) -->
-            <TextView
-                android:id="@+id/diaDom"
-                android:layout_width="0dp"
-                android:layout_height="36dp"
-                android:layout_weight="1"
-                android:text="@string/domingo"
-                android:textSize="11sp"
-                android:textColor="@color/morado_tarjetas"
-                android:gravity="center"
-                android:background="@drawable/bg_chip_unselected"/>
-
         </LinearLayout>
 
-        <!-- Campo: Fotos -->
+        <!-- Foto del servicio -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -248,27 +264,68 @@
             android:textStyle="bold"
             android:layout_marginBottom="12dp"/>
 
-        <LinearLayout
+        <FrameLayout
+            android:id="@+id/layoutFotos"
             android:layout_width="match_parent"
             android:layout_height="140dp"
             android:background="@drawable/input"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_marginBottom="30dp">
+            android:layout_marginBottom="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:importantForAutofill="no">
 
             <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:src="@drawable/camerapro" />
+                android:id="@+id/ivFotoPreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:importantForAutofill="no"
+                android:visibility="gone"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Agregar fotos"
-                android:textColor="@color/primary"
-                android:textStyle="bold" />
-        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutPlaceholderFoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="false"
+                android:focusable="false"
+                android:importantForAutofill="no">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/camerapro"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:importantForAutofill="no"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/agregar_foto"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:importantForAutofill="no"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Botón Publicar -->
+        <Button
+            android:id="@+id/btnPublicar"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="@string/publicar_servicio"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primary"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.Button"/>
 
     </LinearLayout>
 </ScrollView>

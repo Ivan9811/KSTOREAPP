@@ -7,10 +7,14 @@ import androidx.core.graphics.toColorInt
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import com.ucompensar.kstoreapp.MainActivity
 import com.ucompensar.kstoreapp.R
+import com.ucompensar.kstoreapp.process.SupabaseClient
+import io.github.jan.supabase.auth.auth
+import kotlinx.coroutines.launch
 
 abstract class BaseActivity : AppCompatActivity() {
 
@@ -30,10 +34,8 @@ abstract class BaseActivity : AppCompatActivity() {
         window.statusBarColor = getStatusBarColor().toColorInt()
         WindowCompat.setDecorFitsSystemWindows(window, true)
 
-        // Fragment inicial según el rol
         cargarFragment(getFragmentInicial())
 
-        // BottomNav
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
         bottomNav.itemIconTintList = null
         bottomNav.labelVisibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED
@@ -53,12 +55,20 @@ abstract class BaseActivity : AppCompatActivity() {
     fun cargarFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainer, fragment)
-            .commit()
+            .commitAllowingStateLoss()
     }
 
     private fun cerrarSesion() {
-        // FirebaseAuth.getInstance().signOut()
-        startActivity(Intent(this, MainActivity::class.java))
-        finish()
+        lifecycleScope.launch {
+            try {
+                SupabaseClient.client.auth.signOut()
+            } catch (e: Exception) {
+                // Si falla igual navegamos
+            } finally {
+                val intent = Intent(this@BaseActivity, MainActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+            }
+        }
     }
 }

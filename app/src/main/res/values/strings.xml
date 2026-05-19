@@ -318,6 +318,44 @@
     <string name="disponibilidadprofesional">Disponibilidad</string>
     <string name="fotos_del_trabajo">Fotos del Trabajo</string>
     <string name="juan_rodrigues_gmail_com">juan.rodrigues@gmail.com</string>
+    <string name="_0">$0</string>
+    <string name="pesos_colombianos">PESOS COL</string>
+    <string name="trabajos_mes">Trabajos Mes</string>
+    <string name="_0_0">0.0 ⭐</string>
+    <string name="calificaci_n">Calificación</string>
+    <string name="circle_verde">🟢</string>
+    <string name="disponible">Disponible</string>
+    <string name="ver_todas">Ver todas</string>
+    <string name="sin_solicitudes">Sin solicitudes</string>
+    <string name="chek">✓</string>
+    <string name="x_cerrar">✕</string>
+    <string name="sin_trabajos_en_curso">Sin trabajos en curso</string>
+    <string name="progreso_estimado">Progreso estimado</string>
+    <string name="pendientes">Pendientes</string>
+    <string name="aceptados">Aceptados</string>
+    <string name="completados">Completados</string>
+    <string name="lista">📋</string>
+    <string name="no_hay_pedidos_a_n">No hay pedidos aún</string>
+    <string name="ver_solicitudes">Aquí verás tus solicitudes y trabajos</string>
+    <string name="nueva_solicitud">🔔 Nueva solicitud</string>
+    <string name="fechas">12 Marzo 2026</string>
+    <string name="clientes">Cliente: Carlos Martínez</string>
+    <string name="precios">$150</string>
+    <string name="calendario">🗓 Fecha</string>
+    <string name="tiempo">🕐 Hora</string>
+    <string name="horas">10:00</string>
+    <string name="referencias">📎 Referencia</string>
+    <string name="codigo">#SRV-4821</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="categor_a">Categoría</string>
+    <string name="agregar_foto">Agregar foto</string>
+    <string name="publicar_servicio">Publicar Servicio</string>
+    <string name="enviar">Enviar</string>
+    <string name="escribe_un_mensaje">Escribe un mensaje...</string>
+    <string name="ducha">🚿</string>
+    <string name="icon_martillo">🔨</string>
+    <string name="ver_ubicaci_n">Ver ubicación</string>
+    <string name="ubicaci_n">Ubicación</string>
 
 
 </resources>

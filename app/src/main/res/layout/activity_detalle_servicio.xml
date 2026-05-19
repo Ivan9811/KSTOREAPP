@@ -4,13 +4,56 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
 
-    <!-- Contenido scrolleable -->
+    <!-- BARRA INFERIOR anclada al fondo -->
+    <LinearLayout
+        android:id="@+id/barraInferior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="16dp"
+        android:gravity="center_vertical"
+        android:elevation="12dp"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/btnChat"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:text="💬 Chat"
+            android:textSize="13sp"
+            android:textColor="@color/primary"
+            android:backgroundTint="@color/white"
+            android:layout_marginEnd="8dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        <Button
+            android:id="@+id/btnReservar"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:text="@string/contratar_agendar"
+            android:textSize="13sp"
+            android:backgroundTint="@color/morado_tarjetas"
+            android:textColor="@color/white"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            style="@style/Widget.MaterialComponents.Button"/>
+
+    </LinearLayout>
+
+    <!-- SCROLL con padding bottom para no quedar tapado por los botones -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="72dp"
+        android:paddingBottom="90dp"
         android:clipToPadding="false">
 
         <LinearLayout
@@ -18,13 +61,18 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- ===== HEADER MORADO ===== -->
+            <!-- HEADER FOTO -->
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="220dp"
                 android:background="@color/morado_opaco">
 
-                <!-- Botón volver -->
+                <ImageView
+                    android:id="@+id/ivFotoServicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
                 <ImageView
                     android:id="@+id/btnVolver"
                     android:layout_width="36dp"
@@ -36,7 +84,6 @@
                     android:layout_gravity="top|start"
                     app:tint="@color/white"/>
 
-                <!-- Favorito -->
                 <ImageView
                     android:id="@+id/btnFavorito"
                     android:layout_width="36dp"
@@ -46,32 +93,46 @@
                     android:background="@drawable/bg_circle_gray"
                     android:layout_margin="16dp"
                     android:layout_gravity="top|end"
+                    android:clickable="true"
+                    android:focusable="true"
                     app:tint="@color/white"/>
 
             </FrameLayout>
 
-            <!-- ===== CONTENIDO ===== -->
+            <!-- CONTENIDO -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <!-- Profesional -->
+                <!-- Info profesional -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center_vertical">
 
-                    <TextView
+                    <FrameLayout
                         android:layout_width="44dp"
-                        android:layout_height="44dp"
-                        android:text="@string/jr"
-                        android:textColor="@color/white"
-                        android:textSize="14sp"
-                        android:gravity="center"
-                        android:background="@drawable/bg_avatar_purple"/>
+                        android:layout_height="44dp">
+
+                        <TextView
+                            android:id="@+id/tvIniciales"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:background="@drawable/bg_avatar_purple"/>
+
+                        <ImageView
+                            android:id="@+id/ivFotoProfesional"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone"/>
+                    </FrameLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -81,23 +142,21 @@
                         android:layout_marginStart="10dp">
 
                         <TextView
+                            android:id="@+id/tvNombreProfesional"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/juan_rodr_guez"
                             android:textStyle="bold"
                             android:textSize="15sp"
                             android:textColor="@color/Texto1"/>
 
                         <TextView
+                            android:id="@+id/tvCalificacion"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/calificacion"
                             android:textSize="12sp"
                             android:textColor="@color/dorado"/>
-
                     </LinearLayout>
 
-                    <!-- Badge Verificado -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -112,9 +171,9 @@
 
                 <!-- Título -->
                 <TextView
+                    android:id="@+id/tvTituloServicio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/instalaci_n_el_ctrica_residencial"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:textColor="@color/Texto1"
@@ -122,9 +181,9 @@
 
                 <!-- Precio -->
                 <TextView
+                    android:id="@+id/tvPrecio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_50_hora"
                     android:textSize="22sp"
                     android:textStyle="bold"
                     android:textColor="@color/morado_tarjetas"
@@ -138,9 +197,9 @@
                     android:layout_marginTop="10dp">
 
                     <TextView
+                        android:id="@+id/tvCiudad"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/bogot"
                         android:textSize="11sp"
                         android:textColor="@color/morado_tarjetas"
                         android:paddingHorizontal="10dp"
@@ -149,20 +208,9 @@
                         android:background="@drawable/bg_chip_unselected"/>
 
                     <TextView
+                        android:id="@+id/tvCategoria"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/electricista"
-                        android:textSize="11sp"
-                        android:textColor="@color/morado_tarjetas"
-                        android:paddingHorizontal="10dp"
-                        android:paddingVertical="4dp"
-                        android:layout_marginEnd="6dp"
-                        android:background="@drawable/bg_chip_unselected"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/disponible_hoy"
                         android:textSize="11sp"
                         android:textColor="@color/morado_tarjetas"
                         android:paddingHorizontal="10dp"
@@ -182,99 +230,43 @@
                     android:layout_marginTop="16dp"/>
 
                 <TextView
+                    android:id="@+id/tvDescripcionServicio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/electricista_certificado_con_m_s_de_10_a_os_de_experiencia_en_instalaciones_el_ctricas_residenciales_y_comerciales_ofrezco_servicios_de_calidad_garantizados_trabajando_con_las_mejores_pr_cticas_de_seguridad_y_cumpliendo_todas_las_normativas_vigentes"
                     android:textSize="13sp"
                     android:textColor="@color/gris"
                     android:lineSpacingExtra="3dp"
-                    android:layout_marginTop="6dp"/>
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="16dp"/>
 
-                <!-- ¿Qué incluye? -->
+                <!-- Ubicación -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/qu_incluye"
+                    android:text="@string/ubicaci_n"
                     android:textSize="15sp"
                     android:textStyle="bold"
                     android:textColor="@color/Texto1"
-                    android:layout_marginTop="16dp"/>
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"/>
 
-                <LinearLayout
+                <Button
+                    android:id="@+id/btnVerUbicacion"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:layout_marginTop="8dp">
+                    android:layout_height="45dp"
+                    android:text="@string/ver_ubicaci_n"
+                    android:backgroundTint="@color/morado_tarjetas"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="10dp"/>
 
-                    <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:src="@drawable/search"
-                        app:tint="@color/morado_tarjetas"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/diagn_stico_y_cotizaci_n_gratuita"
-                        android:textSize="13sp"
-                        android:textColor="@color/Texto1"
-                        android:layout_marginStart="8dp"/>
-
-                </LinearLayout>
+                <!-- MapView reemplaza al <fragment> estático -->
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/mapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"/>
 
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
-    <!-- ===== BARRA INFERIOR FIJA ===== -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:orientation="horizontal"
-        android:background="@color/white"
-        android:paddingHorizontal="12dp"
-        android:paddingVertical="10dp"
-        android:gravity="center_vertical"
-        android:elevation="8dp"
-        android:layout_gravity="bottom">
-
-        <!-- Botón Chat -->
-        <ImageView
-            android:id="@+id/btnChat"
-            android:layout_width="44dp"
-            android:layout_height="44dp"
-            android:src="@drawable/mensajes"
-            android:padding="8dp"
-            android:background="@drawable/bg_chip_unselected"
-            android:layout_marginEnd="8dp"
-            app:tint="@color/morado_tarjetas"/>
-
-        <!-- Botón Calendario -->
-        <ImageView
-            android:id="@+id/btnCalendario"
-            android:layout_width="44dp"
-            android:layout_height="44dp"
-            android:src="@drawable/calendar"
-            android:padding="8dp"
-            android:background="@drawable/bg_chip_orange"
-            android:layout_marginEnd="8dp"
-            app:tint="@color/white"/>
-
-        <!-- Botón Contratar -->
-        <Button
-            android:id="@+id/btnContratar"
-            android:layout_width="0dp"
-            android:layout_height="44dp"
-            android:layout_weight="1"
-            android:text="@string/contratar_agendar"
-            android:textSize="13sp"
-            android:backgroundTint="@color/morado_tarjetas"
-            android:textColor="@color/white"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
-            style="@style/Widget.MaterialComponents.Button"/>
-
-    </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

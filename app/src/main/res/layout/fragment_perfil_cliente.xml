@@ -21,32 +21,34 @@
             android:paddingBottom="32dp"
             android:background="@color/primary">
 
-            <!-- Botón volver -->
-            <ImageView
-                android:id="@+id/btnVolver"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/arrow_back"
-                android:padding="6dp"
-                android:background="@drawable/bg_circle_gray"
-                android:layout_gravity="start"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="16dp"
-                app:tint="@color/primary"/>
-
-            <!-- Avatar -->
-            <TextView
+            <!-- ✅ FrameLayout para foto o iniciales -->
+            <FrameLayout
                 android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:text="@string/jr"
-                android:textColor="@color/primary"
-                android:textSize="26sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:background="@drawable/bg_circle_gray"/>
+                android:layout_height="80dp">
 
-            <!-- Nombre -->
+                <!-- Iniciales (visible cuando no hay foto) -->
+                <TextView
+                    android:id="@+id/tvIniciales"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:textColor="@color/primary"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/bg_circle_gray"/>
+
+                <!-- ✅ Foto de perfil (visible cuando hay foto) -->
+                <ImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+
             <TextView
+                android:id="@+id/tvNombrePerfil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/juan_rodr_guez"
@@ -55,7 +57,6 @@
                 android:textColor="@color/white"
                 android:layout_marginTop="12dp"/>
 
-            <!-- Badge profesión -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -65,132 +66,16 @@
                 android:paddingVertical="5dp"
                 android:layout_marginTop="8dp">
 
-                <ImageView
-                    android:layout_width="12dp"
-                    android:layout_height="12dp"
-                    android:src="@drawable/bolt"
-                    app:tint="@color/white"/>
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/electricista_certificada"
+                    android:text="@string/cliente"
                     android:textSize="12sp"
                     android:textColor="@color/white"
                     android:layout_marginStart="4dp"/>
 
             </LinearLayout>
 
-            <!-- Stats -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="24dp"
-                android:paddingHorizontal="16dp"
-                android:weightSum="4">
-
-                <!-- Reseñas -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/_127"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/rese_as"
-                        android:textSize="11sp"
-                        android:textColor="@color/barras"/>
-
-                </LinearLayout>
-
-                <!-- Rating -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/_4_9"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/rating"
-                        android:textSize="11sp"
-                        android:textColor="@color/barras"/>
-
-                </LinearLayout>
-
-                <!-- Contrataciones -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/_245"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/contrataciones"
-                        android:textSize="11sp"
-                        android:textColor="@color/barras"/>
-
-                </LinearLayout>
-
-                <!-- En la app -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/_3_yr"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/en_la_app"
-                        android:textSize="11sp"
-                        android:textColor="@color/barras"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
         </LinearLayout>
 
         <!-- ===== TARJETA MI CUENTA ===== -->
@@ -233,13 +118,11 @@
                         android:layout_height="36dp"
                         android:gravity="center"
                         android:background="@drawable/bg_circle_gray">
-
                         <ImageView
                             android:layout_width="18dp"
                             android:layout_height="18dp"
                             android:src="@drawable/photoperfil"
                             app:tint="@color/primary"/>
-
                     </LinearLayout>
 
                     <TextView
@@ -256,13 +139,9 @@
                         android:layout_height="16dp"
                         android:src="@drawable/arrow_rigth"
                         app:tint="@color/gris"/>
-
                 </LinearLayout>
 
-                <!-- Divider -->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
+                <View android:layout_width="match_parent" android:layout_height="1dp"
                     android:background="@color/pantalla"/>
 
                 <!-- Favoritos -->
@@ -279,13 +158,11 @@
                         android:layout_height="36dp"
                         android:gravity="center"
                         android:background="@drawable/bg_circle_gray">
-
                         <ImageView
                             android:layout_width="18dp"
                             android:layout_height="18dp"
                             android:src="@drawable/favorito"
                             app:tint="#FF3B30"/>
-
                     </LinearLayout>
 
                     <TextView
@@ -302,13 +179,9 @@
                         android:layout_height="16dp"
                         android:src="@drawable/arrow_rigth"
                         app:tint="@color/gris"/>
-
                 </LinearLayout>
 
-                <!-- Divider -->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
+                <View android:layout_width="match_parent" android:layout_height="1dp"
                     android:background="@color/pantalla"/>
 
                 <!-- Mis Pedidos -->
@@ -325,13 +198,11 @@
                         android:layout_height="36dp"
                         android:gravity="center"
                         android:background="@drawable/bg_circle_gray">
-
                         <ImageView
                             android:layout_width="18dp"
                             android:layout_height="18dp"
                             android:src="@drawable/receipt"
                             app:tint="@color/azul"/>
-
                     </LinearLayout>
 
                     <TextView
@@ -348,7 +219,6 @@
                         android:layout_height="16dp"
                         android:src="@drawable/arrow_rigth"
                         app:tint="@color/gris"/>
-
                 </LinearLayout>
 
             </LinearLayout>
@@ -380,7 +250,6 @@
                     android:letterSpacing="0.1"
                     android:layout_marginBottom="8dp"/>
 
-                <!-- Notificaciones -->
                 <LinearLayout
                     android:id="@+id/itemNotificaciones"
                     android:layout_width="match_parent"
@@ -394,13 +263,11 @@
                         android:layout_height="36dp"
                         android:gravity="center"
                         android:background="@drawable/bg_circle_gray">
-
                         <ImageView
                             android:layout_width="18dp"
                             android:layout_height="18dp"
                             android:src="@drawable/notificacion"
                             app:tint="@color/dorado"/>
-
                     </LinearLayout>
 
                     <TextView
@@ -412,28 +279,16 @@
                         android:textColor="@color/Texto1"
                         android:layout_marginStart="12dp"/>
 
-                    <!-- Badge nuevas -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/_3_nuevas"
-                        android:textSize="11sp"
-                        android:textColor="@color/dorado"
-                        android:paddingHorizontal="8dp"
-                        android:paddingVertical="3dp"
-                        android:background="@drawable/bg_chip_unselected"
-                        android:layout_marginEnd="8dp"/>
-
                     <ImageView
                         android:layout_width="16dp"
                         android:layout_height="16dp"
                         android:src="@drawable/arrow_rigth"
                         app:tint="@color/gris"/>
-
                 </LinearLayout>
 
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/pantalla"/>
 
-                <!-- Privacidad y Seguridad -->
                 <LinearLayout
                     android:id="@+id/itemPrivacidad"
                     android:layout_width="match_parent"
@@ -447,13 +302,10 @@
                         android:layout_height="36dp"
                         android:gravity="center"
                         android:background="@drawable/bg_circle_gray">
-
                         <ImageView
                             android:layout_width="18dp"
                             android:layout_height="18dp"
-                            android:src="@drawable/lock"
-                           />
-
+                            android:src="@drawable/lock"/>
                     </LinearLayout>
 
                     <TextView
@@ -470,19 +322,18 @@
                         android:layout_height="16dp"
                         android:src="@drawable/arrow_rigth"
                         app:tint="@color/gris"/>
-
                 </LinearLayout>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- ===== TARJETA CERRAR SESIÓN ===== -->
+        <!-- ===== CERRAR SESIÓN ===== -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="12dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="100dp"
             app:cardCornerRadius="16dp"
             app:cardElevation="2dp"
             app:cardBackgroundColor="@color/white">
@@ -501,13 +352,11 @@
                     android:layout_height="36dp"
                     android:gravity="center"
                     android:background="@drawable/bg_circle_gray">
-
                     <ImageView
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:src="@drawable/logout"
                         app:tint="#FF3B30"/>
-
                 </LinearLayout>
 
                 <TextView

@@ -125,21 +125,27 @@ class InicioFragment : Fragment() {
                     )
                 }
 
-                // ── Segundo servicio — tarjeta pequeña ───────────────────────
+                // ── Segundo servicio ─────────────────────────────────────────
                 if (servicios.size > 1) {
                     mostrarServicioAdicional(
                         view, servicios[1],
                         R.id.cardServicio2, R.id.ivFotoServicio2,
-                        R.id.tvTituloServicio2, R.id.tvPrecioServicio2
+                        R.id.tvTituloServicio2, R.id.tvPrecioServicio2,
+                        R.id.tvCategoriaServicio2, R.id.tvInicialesProfesional2,
+                        R.id.tvNombreProfesional2, R.id.tvCalificacionServicio2,
+                        R.id.tvDescripcionServicio2
                     )
                 }
 
-                // ── Tercer servicio — tarjeta pequeña ────────────────────────
+                // ── Tercer servicio ───────────────────────────────────────────
                 if (servicios.size > 2) {
                     mostrarServicioAdicional(
                         view, servicios[2],
                         R.id.cardServicio3, R.id.ivFotoServicio3,
-                        R.id.tvTituloServicio3, R.id.tvPrecioServicio3
+                        R.id.tvTituloServicio3, R.id.tvPrecioServicio3,
+                        R.id.tvCategoriaServicio3, R.id.tvInicialesProfesional3,
+                        R.id.tvNombreProfesional3, R.id.tvCalificacionServicio3,
+                        R.id.tvDescripcionServicio3
                     )
                 }
 
@@ -155,23 +161,59 @@ class InicioFragment : Fragment() {
         cardId: Int,
         ivId: Int,
         tvTituloId: Int,
-        tvPrecioId: Int
+        tvPrecioId: Int,
+        tvCategoriaId: Int,
+        tvInicialesId: Int,
+        tvNombreId: Int,
+        tvCalificacionId: Int,
+        tvDescripcionId: Int
     ) {
         val card = view.findViewById<LinearLayout>(cardId) ?: return
-        card.visibility = View.VISIBLE
+
+        // ✅ Mostrar el CardView padre (que envuelve el LinearLayout)
+        val cardView = card.parent as? androidx.cardview.widget.CardView
+        cardView?.visibility = View.VISIBLE
 
         val servicioId    = servicio["id"]?.jsonPrimitive?.content ?: ""
         val titulo        = servicio["titulo"]?.jsonPrimitive?.content ?: ""
         val precio        = servicio["precio"]?.jsonPrimitive?.doubleOrNull ?: 0.0
         val fotoUrl       = servicio["foto_url"]?.jsonPrimitive?.content ?: ""
+        val categoria     = servicio["categoria"]?.jsonPrimitive?.content ?: ""
+        val descripcion   = servicio["descripcion"]?.jsonPrimitive?.content ?: ""
         val profesionalId = servicio["profesional_id"]?.jsonPrimitive?.content ?: ""
 
-        view.findViewById<TextView>(tvTituloId)?.text = titulo
-        view.findViewById<TextView>(tvPrecioId)?.text =
-            "$${ String.format("%,.0f", precio)}/hr"
+        view.findViewById<TextView>(tvTituloId)?.text     = titulo
+        view.findViewById<TextView>(tvPrecioId)?.text     = "$${ String.format("%,.0f", precio)}/hr"
+        view.findViewById<TextView>(tvCategoriaId)?.text  = categoria
+        view.findViewById<TextView>(tvDescripcionId)?.text = descripcion
 
         if (fotoUrl.isNotEmpty()) {
             view.findViewById<ImageView>(ivId)?.load(fotoUrl) { crossfade(true) }
+        }
+
+        // Cargar nombre y calificación del profesional
+        viewLifecycleOwner.lifecycleScope.launch {
+            try {
+                val profile = SupabaseClient.client.postgrest
+                    .from("profiles")
+                    .select { filter { eq("id", profesionalId) } }
+                    .decodeSingle<Map<String, JsonElement>>()
+                val nombre = profile["nombre"]?.jsonPrimitive?.content ?: "Profesional"
+                val iniciales = nombre.split(" ")
+                    .take(2).mapNotNull { it.firstOrNull()?.uppercaseChar() }.joinToString("")
+
+                val cal = try {
+                    SupabaseClient.client.postgrest
+                        .from("profesionales")
+                        .select { filter { eq("id", profesionalId) } }
+                        .decodeSingle<Map<String, JsonElement>>()
+                        .let { it["calificacion"]?.jsonPrimitive?.doubleOrNull ?: 0.0 }
+                } catch (_: Exception) { 0.0 }
+
+                view.findViewById<TextView>(tvNombreId)?.text     = nombre
+                view.findViewById<TextView>(tvInicialesId)?.text  = iniciales
+                view.findViewById<TextView>(tvCalificacionId)?.text = "⭐ ${String.format("%.1f", cal)}"
+            } catch (_: Exception) {}
         }
 
         card.setOnClickListener {

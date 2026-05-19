@@ -356,6 +356,28 @@
     <string name="icon_martillo">🔨</string>
     <string name="ver_ubicaci_n">Ver ubicación</string>
     <string name="ubicaci_n">Ubicación</string>
+    <string name="chatt">💬 Chat</string>
+    <string name="descripcion">..........</string>
+    <string name="stas1">⭐ 4+</string>
+    <string name="stas2">⭐ 4.5+</string>
+    <string name="Stas3">⭐ 5.0</string>
+    <string name="sin_resultados_para_tu_b_squeda">Sin resultados para tu búsqueda</string>
+    <string name="Guardar_favoritos">Guarda tus servicios favoritos para encontrarlos más rápido</string>
+    <string name="mis_publicaciones">Mis Publicaciones</string>
+    <string name="todoss">Todos</string>
+    <string name="activos">Activos</string>
+    <string name="pausados">Pausados</string>
+    <string name="a_n_no_tienes_publicaciones">Aún no tienes publicaciones</string>
+    <string name="publica_tu_primer_servicio">Publica tu primer servicio para que los clientes te encuentren</string>
+    <string name="publicar_mi_primer_servicio">Publicar mi primer servicio</string>
+    <string name="nueva_publicacion">Nueva publicación</string>
+    <string name="profesional">profesional</string>
+    <string name="cero">0</string>
+    <string name="cero_cero">0.0</string>
+    <string name="ubicaci_n_del_servicio">Ubicación del servicio</string>
+    <string name="detectar_mi_ubicaci_n">📍 Detectar mi ubicación</string>
+    <string name="o_escribe_tu_direcci_n_manualmente">O escribe tu dirección manualmente</string>
+    <string name="editar">Editar</string>
 
 
 </resources>

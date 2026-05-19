@@ -205,7 +205,7 @@
                 android:id="@+id/etDescripcion"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:text="@string/electricista_certificado_con_m_s_de_10_a_os_de_experiencia_en_instalaciones_residenciales_y_comerciales_trabajo_garantizado"
+                android:text="@string/descripcion"
                 android:textSize="14sp"
                 android:textColor="@color/Texto1"
                 android:paddingHorizontal="14dp"

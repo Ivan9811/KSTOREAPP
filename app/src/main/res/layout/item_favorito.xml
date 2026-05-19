@@ -16,7 +16,7 @@
         android:padding="12dp"
         android:gravity="center_vertical">
 
-        <!-- ✅ Foto del servicio (antes era solo un ícono estático) -->
+        <!-- Foto del servicio-->
         <FrameLayout
             android:layout_width="64dp"
             android:layout_height="64dp"

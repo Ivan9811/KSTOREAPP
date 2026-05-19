@@ -148,11 +148,11 @@
                 android:textColor="@color/_1a1a1a" />
         </LinearLayout>
 
-        <!-- ✅ SECCIÓN UBICACIÓN (nueva) -->
+        <!--SECCIÓN UBICACIÓN (nueva) -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ubicación del servicio"
+            android:text="@string/ubicaci_n_del_servicio"
             android:textColor="@color/titulos_color"
             android:textStyle="bold"
             android:layout_marginBottom="8dp"/>
@@ -162,7 +162,7 @@
             android:id="@+id/btnDetectarUbicacion"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:text="📍 Detectar mi ubicación"
+            android:text="@string/detectar_mi_ubicaci_n"
             android:textSize="14sp"
             android:textColor="@color/white"
             android:backgroundTint="@color/morado_tarjetas"
@@ -177,7 +177,7 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:background="@drawable/input"
-            android:hint="O escribe tu dirección manualmente"
+            android:hint="@string/o_escribe_tu_direcci_n_manualmente"
             android:paddingHorizontal="16dp"
             android:textSize="14sp"
             android:inputType="textPostalAddress"
@@ -212,46 +212,86 @@
             android:importantForAutofill="no"
             android:layout_marginBottom="32dp">
 
-            <TextView android:id="@+id/diaLun"
-                android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1"
-                android:text="@string/lunes" android:textSize="11sp"
-                android:textColor="@color/morado_tarjetas" android:gravity="center"
-                android:layout_marginEnd="4dp" android:background="@drawable/bg_chip_unselected"/>
+            <TextView
+                android:id="@+id/diaLun"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="@string/lunes"
+                android:textSize="11sp"
+                android:textColor="@color/morado_tarjetas"
+                android:gravity="center"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_chip_unselected"/>
 
-            <TextView android:id="@+id/diaMar"
-                android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1"
-                android:text="@string/martes" android:textSize="11sp"
-                android:textColor="@color/morado_tarjetas" android:gravity="center"
-                android:layout_marginEnd="4dp" android:background="@drawable/bg_chip_unselected"/>
+            <TextView
+                android:id="@+id/diaMar"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="@string/martes"
+                android:textSize="11sp"
+                android:textColor="@color/morado_tarjetas"
+                android:gravity="center"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_chip_unselected"/>
 
             <TextView android:id="@+id/diaMie"
-                android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1"
-                android:text="@string/miercoles" android:textSize="11sp"
-                android:textColor="@color/morado_tarjetas" android:gravity="center"
-                android:layout_marginEnd="4dp" android:background="@drawable/bg_chip_unselected"/>
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="@string/miercoles"
+                android:textSize="11sp"
+                android:textColor="@color/morado_tarjetas"
+                android:gravity="center"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_chip_unselected"/>
 
-            <TextView android:id="@+id/diaJue"
-                android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1"
-                android:text="@string/jueves" android:textSize="11sp"
-                android:textColor="@color/morado_tarjetas" android:gravity="center"
-                android:layout_marginEnd="4dp" android:background="@drawable/bg_chip_unselected"/>
+            <TextView
+                android:id="@+id/diaJue"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="@string/jueves"
+                android:textSize="11sp"
+                android:textColor="@color/morado_tarjetas"
+                android:gravity="center"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_chip_unselected"/>
 
-            <TextView android:id="@+id/diaVie"
-                android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1"
-                android:text="@string/viernes" android:textSize="11sp"
-                android:textColor="@color/morado_tarjetas" android:gravity="center"
-                android:layout_marginEnd="4dp" android:background="@drawable/bg_chip_unselected"/>
+            <TextView
+                android:id="@+id/diaVie"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="@string/viernes"
+                android:textSize="11sp"
+                android:textColor="@color/morado_tarjetas"
+                android:gravity="center"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_chip_unselected"/>
 
-            <TextView android:id="@+id/diaSab"
-                android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1"
-                android:text="@string/s_bado" android:textSize="11sp"
-                android:textColor="@color/morado_tarjetas" android:gravity="center"
-                android:layout_marginEnd="4dp" android:background="@drawable/bg_chip_unselected"/>
+            <TextView
+                android:id="@+id/diaSab"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="@string/s_bado"
+                android:textSize="11sp"
+                android:textColor="@color/morado_tarjetas"
+                android:gravity="center"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_chip_unselected"/>
 
-            <TextView android:id="@+id/diaDom"
-                android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1"
-                android:text="@string/domingo" android:textSize="11sp"
-                android:textColor="@color/morado_tarjetas" android:gravity="center"
+            <TextView
+                android:id="@+id/diaDom"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="@string/domingo"
+                android:textSize="11sp"
+                android:textColor="@color/morado_tarjetas"
+                android:gravity="center"
                 android:background="@drawable/bg_chip_unselected"/>
         </LinearLayout>
 
